@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE02B58B29B0189300CA5C84 /* OrofacialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */; };
+		BE02B58D29B0189300CA5C84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B58C29B0189300CA5C84 /* ContentView.swift */; };
+		BE02B58F29B0189400CA5C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE02B58E29B0189400CA5C84 /* Assets.xcassets */; };
+		BE02B59229B0189400CA5C84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE02B59129B0189400CA5C84 /* Preview Assets.xcassets */; };
+		BE02B59C29B0189400CA5C84 /* OrofacialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B59B29B0189400CA5C84 /* OrofacialTests.swift */; };
+		BE02B5A629B0189400CA5C84 /* OrofacialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B5A529B0189400CA5C84 /* OrofacialUITests.swift */; };
+		BE02B5A829B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */; };
+		BE40818229C958170058C97B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40818129C958170058C97B /* OnboardingView.swift */; };
+		BE40818429C9582F0058C97B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40818329C9582F0058C97B /* HomeView.swift */; };
+		BE40818629C970400058C97B /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40818529C970400058C97B /* CircleGroupView.swift */; };
+		BE40818829C972F00058C97B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40818729C972F00058C97B /* LoginView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE02B59829B0189400CA5C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE02B57F29B0189300CA5C84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE02B58629B0189300CA5C84;
+			remoteInfo = Orofacial;
+		};
+		BE02B5A229B0189400CA5C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE02B57F29B0189300CA5C84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE02B58629B0189300CA5C84;
+			remoteInfo = Orofacial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE02B58729B0189300CA5C84 /* Orofacial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orofacial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialApp.swift; sourceTree = "<group>"; };
+		BE02B58C29B0189300CA5C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE02B58E29B0189400CA5C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE02B59129B0189400CA5C84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE02B59729B0189400CA5C84 /* OrofacialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrofacialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE02B59B29B0189400CA5C84 /* OrofacialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialTests.swift; sourceTree = "<group>"; };
+		BE02B5A129B0189400CA5C84 /* OrofacialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrofacialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE02B5A529B0189400CA5C84 /* OrofacialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialUITests.swift; sourceTree = "<group>"; };
+		BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE40818129C958170058C97B /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BE40818329C9582F0058C97B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BE40818529C970400058C97B /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		BE40818729C972F00058C97B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE02B58429B0189300CA5C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE02B59429B0189400CA5C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE02B59E29B0189400CA5C84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE02B57E29B0189300CA5C84 = {
+			isa = PBXGroup;
+			children = (
+				BE02B58929B0189300CA5C84 /* Orofacial */,
+				BE02B59A29B0189400CA5C84 /* OrofacialTests */,
+				BE02B5A429B0189400CA5C84 /* OrofacialUITests */,
+				BE02B58829B0189300CA5C84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE02B58829B0189300CA5C84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE02B58729B0189300CA5C84 /* Orofacial.app */,
+				BE02B59729B0189400CA5C84 /* OrofacialTests.xctest */,
+				BE02B5A129B0189400CA5C84 /* OrofacialUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE02B58929B0189300CA5C84 /* Orofacial */ = {
+			isa = PBXGroup;
+			children = (
+				BE40818029C9579F0058C97B /* Views */,
+				BE40817F29C957980058C97B /* Fonts */,
+				BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */,
+				BE40817E29C9575A0058C97B /* Screens */,
+				BE02B58E29B0189400CA5C84 /* Assets.xcassets */,
+				BE02B59029B0189400CA5C84 /* Preview Content */,
+			);
+			path = Orofacial;
+			sourceTree = "<group>";
+		};
+		BE02B59029B0189400CA5C84 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BE02B59129B0189400CA5C84 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BE02B59A29B0189400CA5C84 /* OrofacialTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE02B59B29B0189400CA5C84 /* OrofacialTests.swift */,
+			);
+			path = OrofacialTests;
+			sourceTree = "<group>";
+		};
+		BE02B5A429B0189400CA5C84 /* OrofacialUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE02B5A529B0189400CA5C84 /* OrofacialUITests.swift */,
+				BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */,
+			);
+			path = OrofacialUITests;
+			sourceTree = "<group>";
+		};
+		BE40817E29C9575A0058C97B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BE02B58C29B0189300CA5C84 /* ContentView.swift */,
+				BE40818129C958170058C97B /* OnboardingView.swift */,
+				BE40818729C972F00058C97B /* LoginView.swift */,
+				BE40818329C9582F0058C97B /* HomeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BE40817F29C957980058C97B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BE40818029C9579F0058C97B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE40818529C970400058C97B /* CircleGroupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE02B58629B0189300CA5C84 /* Orofacial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE02B5AB29B0189400CA5C84 /* Build configuration list for PBXNativeTarget "Orofacial" */;
+			buildPhases = (
+				BE02B58329B0189300CA5C84 /* Sources */,
+				BE02B58429B0189300CA5C84 /* Frameworks */,
+				BE02B58529B0189300CA5C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Orofacial;
+			productName = Orofacial;
+			productReference = BE02B58729B0189300CA5C84 /* Orofacial.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE02B59629B0189400CA5C84 /* OrofacialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE02B5AE29B0189400CA5C84 /* Build configuration list for PBXNativeTarget "OrofacialTests" */;
+			buildPhases = (
+				BE02B59329B0189400CA5C84 /* Sources */,
+				BE02B59429B0189400CA5C84 /* Frameworks */,
+				BE02B59529B0189400CA5C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE02B59929B0189400CA5C84 /* PBXTargetDependency */,
+			);
+			name = OrofacialTests;
+			productName = OrofacialTests;
+			productReference = BE02B59729B0189400CA5C84 /* OrofacialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE02B5A029B0189400CA5C84 /* OrofacialUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE02B5B129B0189400CA5C84 /* Build configuration list for PBXNativeTarget "OrofacialUITests" */;
+			buildPhases = (
+				BE02B59D29B0189400CA5C84 /* Sources */,
+				BE02B59E29B0189400CA5C84 /* Frameworks */,
+				BE02B59F29B0189400CA5C84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE02B5A329B0189400CA5C84 /* PBXTargetDependency */,
+			);
+			name = OrofacialUITests;
+			productName = OrofacialUITests;
+			productReference = BE02B5A129B0189400CA5C84 /* OrofacialUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE02B57F29B0189300CA5C84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					BE02B58629B0189300CA5C84 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					BE02B59629B0189400CA5C84 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BE02B58629B0189300CA5C84;
+					};
+					BE02B5A029B0189400CA5C84 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = BE02B58629B0189300CA5C84;
+					};
+				};
+			};
+			buildConfigurationList = BE02B58229B0189300CA5C84 /* Build configuration list for PBXProject "Orofacial" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE02B57E29B0189300CA5C84;
+			productRefGroup = BE02B58829B0189300CA5C84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE02B58629B0189300CA5C84 /* Orofacial */,
+				BE02B59629B0189400CA5C84 /* OrofacialTests */,
+				BE02B5A029B0189400CA5C84 /* OrofacialUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE02B58529B0189300CA5C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE02B59229B0189400CA5C84 /* Preview Assets.xcassets in Resources */,
+				BE02B58F29B0189400CA5C84 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE02B59529B0189400CA5C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE02B59F29B0189400CA5C84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE02B58329B0189300CA5C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE40818829C972F00058C97B /* LoginView.swift in Sources */,
+				BE40818629C970400058C97B /* CircleGroupView.swift in Sources */,
+				BE40818229C958170058C97B /* OnboardingView.swift in Sources */,
+				BE40818429C9582F0058C97B /* HomeView.swift in Sources */,
+				BE02B58D29B0189300CA5C84 /* ContentView.swift in Sources */,
+				BE02B58B29B0189300CA5C84 /* OrofacialApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE02B59329B0189400CA5C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE02B59C29B0189400CA5C84 /* OrofacialTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE02B59D29B0189400CA5C84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE02B5A629B0189400CA5C84 /* OrofacialUITests.swift in Sources */,
+				BE02B5A829B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE02B59929B0189400CA5C84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE02B58629B0189300CA5C84 /* Orofacial */;
+			targetProxy = BE02B59829B0189400CA5C84 /* PBXContainerItemProxy */;
+		};
+		BE02B5A329B0189400CA5C84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE02B58629B0189300CA5C84 /* Orofacial */;
+			targetProxy = BE02B5A229B0189400CA5C84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BE02B5A929B0189400CA5C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE02B5AA29B0189400CA5C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE02B5AC29B0189400CA5C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Orofacial/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.Orofacial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE02B5AD29B0189400CA5C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Orofacial/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.Orofacial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE02B5AF29B0189400CA5C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.OrofacialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orofacial.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orofacial";
+			};
+			name = Debug;
+		};
+		BE02B5B029B0189400CA5C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.OrofacialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Orofacial.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Orofacial";
+			};
+			name = Release;
+		};
+		BE02B5B229B0189400CA5C84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.OrofacialUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Orofacial;
+			};
+			name = Debug;
+		};
+		BE02B5B329B0189400CA5C84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.OrofacialUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Orofacial;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE02B58229B0189300CA5C84 /* Build configuration list for PBXProject "Orofacial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE02B5A929B0189400CA5C84 /* Debug */,
+				BE02B5AA29B0189400CA5C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE02B5AB29B0189400CA5C84 /* Build configuration list for PBXNativeTarget "Orofacial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE02B5AC29B0189400CA5C84 /* Debug */,
+				BE02B5AD29B0189400CA5C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE02B5AE29B0189400CA5C84 /* Build configuration list for PBXNativeTarget "OrofacialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE02B5AF29B0189400CA5C84 /* Debug */,
+				BE02B5B029B0189400CA5C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE02B5B129B0189400CA5C84 /* Build configuration list for PBXNativeTarget "OrofacialUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE02B5B229B0189400CA5C84 /* Debug */,
+				BE02B5B329B0189400CA5C84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE02B57F29B0189300CA5C84 /* Project object */;
+}
