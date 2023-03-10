@@ -14,6 +14,9 @@
 		BE02B59C29B0189400CA5C84 /* OrofacialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B59B29B0189400CA5C84 /* OrofacialTests.swift */; };
 		BE02B5A629B0189400CA5C84 /* OrofacialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B5A529B0189400CA5C84 /* OrofacialUITests.swift */; };
 		BE02B5A829B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */; };
+		BE502A2229BBF230003B929B /* KronaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */; };
+		BE502A2329BBF230003B929B /* KronaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */; };
+		BE502A2429BBF230003B929B /* KronaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		BE02B5A129B0189400CA5C84 /* OrofacialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrofacialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE02B5A529B0189400CA5C84 /* OrofacialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialUITests.swift; sourceTree = "<group>"; };
 		BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE502A1F29BBE366003B929B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KronaOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,8 @@
 		BE02B58929B0189300CA5C84 /* Orofacial */ = {
 			isa = PBXGroup;
 			children = (
+				BE502A2029BBF1E0003B929B /* Fonts */,
+				BE502A1F29BBE366003B929B /* Info.plist */,
 				BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */,
 				BE02B58C29B0189300CA5C84 /* ContentView.swift */,
 				BE02B58E29B0189400CA5C84 /* Assets.xcassets */,
@@ -125,6 +132,14 @@
 				BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */,
 			);
 			path = OrofacialUITests;
+			sourceTree = "<group>";
+		};
+		BE502A2029BBF1E0003B929B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE502A2229BBF230003B929B /* KronaOne-Regular.ttf in Resources */,
 				BE02B59229B0189400CA5C84 /* Preview Assets.xcassets in Resources */,
 				BE02B58F29B0189400CA5C84 /* Assets.xcassets in Resources */,
 			);
@@ -240,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE502A2329BBF230003B929B /* KronaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE502A2429BBF230003B929B /* KronaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +437,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Orofacial/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Orofacial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +466,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Orofacial/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Orofacial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
