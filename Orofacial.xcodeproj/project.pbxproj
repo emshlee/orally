@@ -14,6 +14,7 @@
 		BE02B59C29B0189400CA5C84 /* OrofacialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B59B29B0189400CA5C84 /* OrofacialTests.swift */; };
 		BE02B5A629B0189400CA5C84 /* OrofacialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B5A529B0189400CA5C84 /* OrofacialUITests.swift */; };
 		BE02B5A829B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */; };
+		BE40817529C6ACB00058C97B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40817429C6ACB00058C97B /* CardView.swift */; };
 		BE502A2229BBF230003B929B /* KronaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */; };
 		BE502A2329BBF230003B929B /* KronaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */; };
 		BE502A2429BBF230003B929B /* KronaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */; };
@@ -38,8 +39,8 @@
 
 /* Begin PBXFileReference section */
 		BE02B58729B0189300CA5C84 /* Orofacial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orofacial.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialApp.swift; sourceTree = "<group>"; };
-		BE02B58C29B0189300CA5C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OrofacialApp.swift; path = ../OrofacialApp.swift; sourceTree = "<group>"; };
+		BE02B58C29B0189300CA5C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
 		BE02B58E29B0189400CA5C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE02B59129B0189400CA5C84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BE02B59729B0189400CA5C84 /* OrofacialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrofacialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +48,7 @@
 		BE02B5A129B0189400CA5C84 /* OrofacialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrofacialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE02B5A529B0189400CA5C84 /* OrofacialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialUITests.swift; sourceTree = "<group>"; };
 		BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE40817429C6ACB00058C97B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BE502A1F29BBE366003B929B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BE502A2129BBF230003B929B /* KronaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KronaOne-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,10 +101,10 @@
 		BE02B58929B0189300CA5C84 /* Orofacial */ = {
 			isa = PBXGroup;
 			children = (
+				BE40817329C6AC1A0058C97B /* New Group1 */,
 				BE502A2029BBF1E0003B929B /* Fonts */,
 				BE502A1F29BBE366003B929B /* Info.plist */,
-				BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */,
-				BE02B58C29B0189300CA5C84 /* ContentView.swift */,
+				BE40817229C6AB830058C97B /* New Group */,
 				BE02B58E29B0189400CA5C84 /* Assets.xcassets */,
 				BE02B59029B0189400CA5C84 /* Preview Content */,
 			);
@@ -132,6 +134,23 @@
 				BE02B5A729B0189400CA5C84 /* OrofacialUITestsLaunchTests.swift */,
 			);
 			path = OrofacialUITests;
+			sourceTree = "<group>";
+		};
+		BE40817229C6AB830058C97B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */,
+				BE02B58C29B0189300CA5C84 /* ContentView.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BE40817329C6AC1A0058C97B /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				BE40817429C6ACB00058C97B /* CardView.swift */,
+			);
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		BE502A2029BBF1E0003B929B /* Fonts */ = {
@@ -276,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE02B58D29B0189300CA5C84 /* ContentView.swift in Sources */,
+				BE40817529C6ACB00058C97B /* CardView.swift in Sources */,
 				BE02B58B29B0189300CA5C84 /* OrofacialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
