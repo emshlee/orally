@@ -26,23 +26,23 @@ struct OnboardingView: View {
                 // MARK: - HEADER
                 
                 VStack(spacing: 0) {
-                    Text("Orofacial Pain")
-                        .font(.system(size: 40))
+                    Text("Oroaid")
+                        .font(.system(size: 60))
                         .fontWeight(.heavy)
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 10)
                     
-                    Text("""
-                    Your daily orofacial pain checker.
-                    """)
+                    Text("Your daily orofacial pain checker")
                     .font(.title3)
                     .fontWeight(.light)
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 10)
                     
-                    Spacer()
+                    .frame(width: 200, height: 100)
+                    
+                
                     
                 }
                 .opacity(isAnimating ? 1 : 0)
@@ -61,6 +61,7 @@ struct OnboardingView: View {
                         .animation(.easeOut(duration: 0.5), value: isAnimating)
                 } //:ZSTACK
                 
+                Spacer()
                 Spacer()
                 Spacer()
                 Spacer()
