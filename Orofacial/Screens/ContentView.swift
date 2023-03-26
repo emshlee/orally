@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    init(){isOnboardingViewActive = true}
     @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     var body: some View {
         ZStack {
