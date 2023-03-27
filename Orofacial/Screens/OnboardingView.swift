@@ -26,7 +26,7 @@ struct OnboardingView: View {
                 // MARK: - HEADER
                 
                 VStack(spacing: 0) {
-                    Text("Oroaid")
+                    Text("Orally")
                         .font(.system(size: 60))
                         .fontWeight(.heavy)
                         .foregroundColor(.black)

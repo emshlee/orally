@@ -17,7 +17,7 @@ struct Home: View {
                 VStack{
                     Spacer()
                     Spacer()
-                    Text("Hi, I'm Oroaid. \nI can help you learn more about your oral health.")
+                    Text("Hi, I'm Orally. \nI can help you learn more about your oral health.")
                         .font(.system(size:30))
                         .bold()
                     Spacer()
