@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AD7372829D534A500A54A26 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7372729D534A500A54A26 /* UserInfoView.swift */; };
 		BE02B58B29B0189300CA5C84 /* OrofacialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */; };
 		BE02B58D29B0189300CA5C84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B58C29B0189300CA5C84 /* ContentView.swift */; };
 		BE02B58F29B0189400CA5C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE02B58E29B0189400CA5C84 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4AD7372729D534A500A54A26 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		BE02B58729B0189300CA5C84 /* Orofacial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orofacial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialApp.swift; sourceTree = "<group>"; };
 		BE02B58C29B0189300CA5C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				BE40818129C958170058C97B /* OnboardingView.swift */,
 				BE40818729C972F00058C97B /* LoginView.swift */,
 				BE40818329C9582F0058C97B /* HomeView.swift */,
+				4AD7372729D534A500A54A26 /* UserInfoView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				BEE0305029D22D7900DE9929 /* PlistManager.swift in Sources */,
 				BE40818829C972F00058C97B /* LoginView.swift in Sources */,
 				BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */,
+				4AD7372829D534A500A54A26 /* UserInfoView.swift in Sources */,
 				BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */,
 				BE40818629C970400058C97B /* CircleGroupView.swift in Sources */,
 				BEE0305629D233E200DE9929 /* OnboardingContentManager.swift in Sources */,
