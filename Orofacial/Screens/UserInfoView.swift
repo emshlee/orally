@@ -67,11 +67,11 @@ struct Personal: View {
                                         .fill(Color.gray)
                                         .frame(width:70, height:2)
                                     Circle()
-                                        .fill(Color.gray)
+                                        .fill(Color.gray.opacity(0.4))
                                         .frame(width: 30, height: 30)
                                         .overlay(
                                             Circle()
-                                                .stroke(Color.gray, lineWidth: 3))
+                                                .stroke(Color.gray.opacity(0.4), lineWidth: 3))
                                         .overlay(
                                             Text("2")
                                                 .foregroundColor(Color.black))
@@ -79,11 +79,11 @@ struct Personal: View {
                                         .fill(Color.gray)
                                         .frame(width:80, height:2)
                                     Circle()
-                                        .fill(Color.gray)
+                                        .fill(Color.gray.opacity(0.4))
                                         .frame(width: 30, height: 30)
                                         .overlay(
                                             Circle()
-                                                .stroke(Color.gray, lineWidth: 3))
+                                                .stroke(Color.gray.opacity(0.4), lineWidth: 3))
                                         .overlay(
                                             Text("3")
                                                 .foregroundColor(Color.black))
@@ -91,11 +91,11 @@ struct Personal: View {
                                         .fill(Color.gray)
                                         .frame(width:60, height:2)
                                     Circle()
-                                        .fill(Color.gray)
+                                        .fill(Color.gray.opacity(0.4))
                                         .frame(width: 30, height: 30)
                                         .overlay(
                                             Circle()
-                                                .stroke(Color.gray, lineWidth: 3))
+                                                .stroke(Color.gray.opacity(0.4), lineWidth: 3))
                                         .overlay(
                                             Text("4")
                                                 .foregroundColor(Color.black))}
