@@ -25,8 +25,10 @@ struct Personal: View {
     
     @State var changePage = false
     
-    @State private var firstName = ""
-    @State private var lastName = ""
+    //@State private var firstName = ""
+    //@State private var lastName = ""
+    @State private var sex = "Options"
+    @State private var gender = "Options"
     @State private var birthdate = Date()
     
     // Animation Properties
@@ -131,6 +133,101 @@ struct Personal: View {
                     Spacer()
                     Spacer()
                     Spacer()
+                    
+                    // Dropdown Menu for Userinput Sex
+                    VStack{
+                        HStack{
+                            Text("Sex")
+                                .font(.system(size: 20))
+                            Spacer()
+                            Menu{
+                                Button(action: {
+                                    sex = "Male"
+                                }, label: {
+                                    Text("Male")
+                                })
+                                Button(action: {
+                                    sex = "Female"
+
+                                }, label: {
+                                    Text("Female")
+                                })
+                                Button(action: {
+                                    sex = "Prefer not to answer"
+
+                                }, label: {
+                                    Text("Prefer not to answer")
+                                })
+                            }label : {
+                                Label(
+                                    title: {Text("\(sex)")},
+                                    icon:{Image(systemName:"chevron.down")}
+                                )
+                            }.font(.system(size: 20))
+                                .foregroundColor(.black)
+                            
+                        }.frame(width: 318, height: 40)
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray, lineWidth: 2))
+                    }
+                    .padding(.vertical,5)
+                    .padding(.horizontal)
+                    
+                    
+                    //Dropdown Menu for UserInput gender
+                    VStack{
+                        HStack{
+                            Text("Gender")
+                                .font(.system(size: 20))
+                            Spacer()
+                            Menu{
+                                Button(action: {
+                                    gender = "Male"
+                                }, label: {
+                                    Text("Male")
+                                })
+                                Button(action: {
+                                    gender = "Female"
+
+                                }, label: {
+                                    Text("Female")
+                                })
+                                Button(action: {
+                                    gender = "Non-Binary"
+
+                                }, label: {
+                                    Text("Non-Binary")
+                                })
+                                Button(action: {
+                                    gender = "Prefer not to answer"
+
+                                }, label: {
+                                    Text("Prefer not to answer")
+                                })
+                            }label : {
+                                Label(
+                                    title: {Text("\(gender)")},
+                                    icon:{Image(systemName:"chevron.down")}
+                                )
+                            }.font(.system(size: 20))
+                                .foregroundColor(.black)
+                            
+                        }.frame(width: 318, height: 40)
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray, lineWidth: 2))
+                    }
+                    .padding(.vertical,5)
+                    .padding(.horizontal)
+                    
+                    
+                    
+                    
+                    
+                    /*
                     // First Name text field
                     VStack(alignment: .leading, spacing:4, content: {
                         TextField("", text: $firstName) { (status) in
@@ -208,7 +305,7 @@ struct Personal: View {
                     .padding(.vertical,12)
                     .padding(.horizontal)
                     .cornerRadius(5)
-                    
+                    */
                     
                     //Date Picker
                     VStack{
@@ -219,9 +316,13 @@ struct Personal: View {
                             .background(
                                 RoundedRectangle(cornerRadius: 8)
                                     .stroke(Color.gray, lineWidth: 2))
-                    }.padding(.vertical,12)
+                    }.padding(.vertical,5)
                     
                     Spacer()
+                    Spacer()
+                    
+                    
+                    
                     //Next button
                     Button(action: {
                         self.changePage = true
@@ -242,7 +343,7 @@ struct Personal: View {
                     })
                     
                     Spacer()
-                    Spacer()
+                    
                 } // end of vstack
                 
                 NavigationLink(destination: MedicalHistory(), isActive: self.$changePage){EmptyView()}.disabled(true)
