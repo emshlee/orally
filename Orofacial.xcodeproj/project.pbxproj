@@ -47,6 +47,13 @@
 		BE40818429C9582F0058C97B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40818329C9582F0058C97B /* HomeView.swift */; };
 		BE40818629C970400058C97B /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40818529C970400058C97B /* CircleGroupView.swift */; };
 		BE40818829C972F00058C97B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40818729C972F00058C97B /* LoginView.swift */; };
+		BEA7AAB42A099F35007B0FAE /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AAB32A099F35007B0FAE /* AuthenticationView.swift */; };
+		BEA7AAB62A09A06F007B0FAE /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AAB52A09A06F007B0FAE /* SignInEmailView.swift */; };
+		BEA7AAB92A09A219007B0FAE /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AAB82A09A219007B0FAE /* AuthenticationManager.swift */; };
+		BEA7AABD2A09AF7B007B0FAE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AABC2A09AF7B007B0FAE /* ProfileView.swift */; };
+		BEA7AABF2A09AFC4007B0FAE /* EncyclopediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AABE2A09AFC4007B0FAE /* EncyclopediaView.swift */; };
+		BEA7AAC22A09B035007B0FAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AAC12A09B035007B0FAE /* SettingsView.swift */; };
+		BEA7AAC42A09B449007B0FAE /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AAC32A09B449007B0FAE /* RootView.swift */; };
 		BEE0304229D2266100DE9929 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304129D2266100DE9929 /* OnboardingItem.swift */; };
 		BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */; };
 		BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */; };
@@ -89,6 +96,13 @@
 		BE40818329C9582F0058C97B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BE40818529C970400058C97B /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
 		BE40818729C972F00058C97B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BEA7AAB32A099F35007B0FAE /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		BEA7AAB52A09A06F007B0FAE /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
+		BEA7AAB82A09A219007B0FAE /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		BEA7AABC2A09AF7B007B0FAE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BEA7AABE2A09AFC4007B0FAE /* EncyclopediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaView.swift; sourceTree = "<group>"; };
+		BEA7AAC12A09B035007B0FAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BEA7AAC32A09B449007B0FAE /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		BEE0304129D2266100DE9929 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViews.swift; sourceTree = "<group>"; };
@@ -172,6 +186,8 @@
 		BE02B58929B0189300CA5C84 /* Orofacial */ = {
 			isa = PBXGroup;
 			children = (
+				BE40818329C9582F0058C97B /* HomeView.swift */,
+				BEA7AAB22A099C72007B0FAE /* Authentication */,
 				3A67BD4629D61B2B00296FCE /* GoogleService-Info.plist */,
 				BEE0304029D2263000DE9929 /* Onboarding */,
 				BE40818029C9579F0058C97B /* Views */,
@@ -212,11 +228,13 @@
 		BE40817E29C9575A0058C97B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				BE02B58C29B0189300CA5C84 /* ContentView.swift */,
 				BE40818129C958170058C97B /* OnboardingView.swift */,
+				BE02B58C29B0189300CA5C84 /* ContentView.swift */,
 				BE40818729C972F00058C97B /* LoginView.swift */,
-				BE40818329C9582F0058C97B /* HomeView.swift */,
 				4AD7372729D534A500A54A26 /* UserInfoView.swift */,
+				BEA7AABC2A09AF7B007B0FAE /* ProfileView.swift */,
+				BEA7AABE2A09AFC4007B0FAE /* EncyclopediaView.swift */,
+				BEA7AAC12A09B035007B0FAE /* SettingsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -234,6 +252,17 @@
 				BE40818529C970400058C97B /* CircleGroupView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BEA7AAB22A099C72007B0FAE /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				BEA7AAB32A099F35007B0FAE /* AuthenticationView.swift */,
+				BEA7AAB52A09A06F007B0FAE /* SignInEmailView.swift */,
+				BEA7AAB82A09A219007B0FAE /* AuthenticationManager.swift */,
+				BEA7AAC32A09B449007B0FAE /* RootView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		BEE0304029D2263000DE9929 /* Onboarding */ = {
@@ -416,15 +445,22 @@
 				BEE0305029D22D7900DE9929 /* PlistManager.swift in Sources */,
 				BE40818829C972F00058C97B /* LoginView.swift in Sources */,
 				BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */,
+				BEA7AAC22A09B035007B0FAE /* SettingsView.swift in Sources */,
+				BEA7AAB92A09A219007B0FAE /* AuthenticationManager.swift in Sources */,
 				4AD7372829D534A500A54A26 /* UserInfoView.swift in Sources */,
+				BEA7AAC42A09B449007B0FAE /* RootView.swift in Sources */,
+				BEA7AAB42A099F35007B0FAE /* AuthenticationView.swift in Sources */,
 				BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */,
 				BE40818629C970400058C97B /* CircleGroupView.swift in Sources */,
+				BEA7AABF2A09AFC4007B0FAE /* EncyclopediaView.swift in Sources */,
+				BEA7AABD2A09AF7B007B0FAE /* ProfileView.swift in Sources */,
 				BEE0305629D233E200DE9929 /* OnboardingContentManager.swift in Sources */,
 				BE40818229C958170058C97B /* OnboardingView.swift in Sources */,
 				BE40818429C9582F0058C97B /* HomeView.swift in Sources */,
 				BEE0304229D2266100DE9929 /* OnboardingItem.swift in Sources */,
 				BE02B58D29B0189300CA5C84 /* ContentView.swift in Sources */,
 				BE02B58B29B0189300CA5C84 /* OrofacialApp.swift in Sources */,
+				BEA7AAB62A09A06F007B0FAE /* SignInEmailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

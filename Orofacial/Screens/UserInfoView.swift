@@ -12,13 +12,8 @@ struct UserInfoView: View {
     var body: some View{
         
         Personal()
-        
-        
     }
 }
-
-
-
 
 struct Personal: View {
     
@@ -35,17 +30,11 @@ struct Personal: View {
     @State var firstisTapped = false
     @State var lastisTapped = false
     
-    
-    
-    
-    
-    
     var body: some View {
         NavigationView{
             ZStack{
                 // Navigation Bar
                 VStack{
-                    
                     Rectangle()
                         .fill(Color.gray.opacity(0.2))
                         .frame(width:400, height:200)
@@ -56,6 +45,7 @@ struct Personal: View {
                                     .font(.system(size:25))
                                 Spacer()
                                 HStack(spacing:0){
+                                    // Personal circle
                                     Circle()
                                         .fill(Color.white)
                                         .frame(width: 30, height: 30)
@@ -68,6 +58,8 @@ struct Personal: View {
                                     Rectangle()
                                         .fill(Color.gray)
                                         .frame(width:70, height:2)
+                                    
+                                    // Medical History circle
                                     Circle()
                                         .fill(Color.gray.opacity(0.4))
                                         .frame(width: 30, height: 30)
@@ -80,6 +72,8 @@ struct Personal: View {
                                     Rectangle()
                                         .fill(Color.gray)
                                         .frame(width:80, height:2)
+                                    
+                                    // Dental History circle
                                     Circle()
                                         .fill(Color.gray.opacity(0.4))
                                         .frame(width: 30, height: 30)
@@ -92,6 +86,8 @@ struct Personal: View {
                                     Rectangle()
                                         .fill(Color.gray)
                                         .frame(width:60, height:2)
+                                    
+                                    // Dental History circle
                                     Circle()
                                         .fill(Color.gray.opacity(0.4))
                                         .frame(width: 30, height: 30)
@@ -349,14 +345,106 @@ struct Personal: View {
                 NavigationLink(destination: MedicalHistory(), isActive: self.$changePage){EmptyView()}.disabled(true)
             } // end of zstack
         } // end of navigation view
-        
     } // end of body
 } // end of struct
 
 struct MedicalHistory: View{
     var body: some View{
         // TO BE EDITED
-        Text("Medical History")
+        NavigationView{
+            ZStack{
+                // Navigation Bar
+                VStack{
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.2))
+                        .frame(width:400, height:200)
+                        .ignoresSafeArea()
+                        .overlay(
+                            VStack{
+                                Text("Patient Information")
+                                    .font(.system(size:25))
+                                Spacer()
+                                HStack(spacing:0){
+                                    // Personal circle
+                                    Circle()
+                                        .fill(Color.gray.opacity(0.4))
+                                        .frame(width: 30, height: 30)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.gray.opacity(0.4), lineWidth: 3))
+                                                
+                                        .overlay(
+                                            Text("1")
+                                                .foregroundColor(Color.black))
+                                    Rectangle()
+                                        .fill(Color.gray)
+                                        .frame(width:70, height:2)
+                                    
+                                    // Medical History circle
+                                    Circle()
+                                        .fill(Color.white)
+                                        .frame(width: 30, height: 30)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.blue, lineWidth: 3))
+                                        .overlay(
+                                            Text("2")
+                                                .foregroundColor(Color.black))
+                                    Rectangle()
+                                        .fill(Color.gray)
+                                        .frame(width:80, height:2)
+                                    
+                                    // Dental History circle
+                                    Circle()
+                                        .fill(Color.gray.opacity(0.4))
+                                        .frame(width: 30, height: 30)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.gray.opacity(0.4), lineWidth: 3))
+                                        .overlay(
+                                            Text("3")
+                                                .foregroundColor(Color.black))
+                                    Rectangle()
+                                        .fill(Color.gray)
+                                        .frame(width:60, height:2)
+                                    
+                                    // Dental History circle
+                                    Circle()
+                                        .fill(Color.gray.opacity(0.4))
+                                        .frame(width: 30, height: 30)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.gray.opacity(0.4), lineWidth: 3))
+                                        .overlay(
+                                            Text("4")
+                                                .foregroundColor(Color.black))}
+                                HStack{
+                                    Spacer()
+                                    Text("Personal")
+                                        .font(.system(size:12))
+                                    Spacer()
+                                    
+                                    Text("Medical History")
+                                        .font(.system(size:12))
+                                    Spacer()
+                                    Text("Dental History")
+                                        .font(.system(size:12))
+                                    Spacer()
+                                    
+                                    Text("Confirm")
+                                        .font(.system(size:12))
+                                    Spacer()
+                                    
+                                }
+                                Spacer()
+                                Spacer()
+                            })
+                    Spacer()
+                    
+                    
+                }
+            }
+        }
     }
 }
 
