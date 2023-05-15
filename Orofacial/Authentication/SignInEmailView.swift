@@ -14,7 +14,7 @@ final class SignInEmailViewModel: ObservableObject {
     @Published var password = ""
     
     func signIn() {
-        // equivalent to assert in Java
+        // equivalent to assert in Java?
         guard !email.isEmpty, !password.isEmpty else {
             // Do validation such as make password more complex...
             // not good practice to print something to handle
@@ -24,7 +24,7 @@ final class SignInEmailViewModel: ObservableObject {
         Task {
             do {
                 let returnedUserData = try await AuthenticationManager.shared.createUser(email: email, password: password)
-                print("success")
+                print("Success")
                 print(returnedUserData)
             } catch {
                 print("Error: \(error)")

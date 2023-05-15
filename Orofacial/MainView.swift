@@ -6,6 +6,29 @@
 //
 
 import SwiftUI
+import Firebase
+
+struct Application: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    var body: some Scene {
+        WindowGroup {
+            NavigationStack {
+                OnboardingView()
+                AuthenticationView()
+            }
+        }
+    }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+      FirebaseApp.configure()
+      
+      return true
+  }
+}
 
 struct MainView: View {
         @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
