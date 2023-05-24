@@ -33,6 +33,7 @@ struct FAQbutton: View {
             .cornerRadius(20)
         }
         .frame(width: 180, height: 250)
+//        .shadow(radius: 10)
     }
 }
 

@@ -23,7 +23,6 @@ struct HomeView: View {
                     VStack{
                         VStack{
                             
-                            Spacer()
                             Text("Hi, I'm Orally. \nI can help you learn more about your oral health.")
                                 .font(.system(size: 28))
                                 .bold()
@@ -31,69 +30,62 @@ struct HomeView: View {
                                 .padding(.vertical, 45)
                                 .padding(.bottom, -22)
                             
-                            Button("Start Symptom Assessment"){
-                                //button action
+                            NavigationLink {
+                                // where it should lead to
+                            } label: {
+                                PrimaryButton(text: "Start Symptom Assessment")
                             }
-                            .foregroundColor(.white)
-                            .frame(width:300, height:50)
-                            .background(Color.black)
-                            .cornerRadius(10)
-                            .font(.system(size:20))
                         }
-                        .padding(.vertical, 50)
+                        .padding(.top, 30)
+                        .padding(.bottom, 80)
                         
-                        VStack {
-                            Text("Frequently Asked Questions")
-                                .font(.system(size: 20))
-                                .bold()
-                            var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-                            LazyVGrid(columns: columns, spacing: 20) {
-                                ForEach(FAQList, id: \.id) {
-                                    FAQ in
-                                    NavigationLink(destination: FAQpage(FAQ: FAQ)) {
-                                        FAQbutton(FAQ: FAQ)
-                                    }
-                                }
-                            }
-                            .padding()
-                        }
+                        // Basic dental care
                         
-//                        VStack {
-//                            Button("What exactly are teeth?") {
-//                                showNewScreen.toggle()
-//                            }
-//                            // BUTTON DESIGN (TO BE CHANGED)
-//                            .foregroundColor(.white)
-//                            .frame(width:300, height:150)
-//                            .background(Color.gray)
-//                            .cornerRadius(10)
-//                            .font(.system(size:20))
-//                            .sheet(isPresented: $showNewScreen, content: { WhatAreTeeth()
-//                            })
-//
-//
-//                            Spacer()
-//
-//                            Button("How many teeth do adults have?") {
-//                                showNewScreen.toggle()
-//                            }
-//                            // BUTTON DESIGN (TO BE CHANGED)
-//                            .foregroundColor(.white)
-//                            .frame(width:300, height:150)
-//                            .background(Color.gray)
-//                            .cornerRadius(10)
-//                            .font(.system(size:20))
-//                            .sheet(isPresented: $showNewScreen, content: { WhatAreTeeth()
-//                            })
-//                        }
-//                        .padding(.top, 50)
+                        FAQView()
+                                                    
+                        
+                    }
+                }
+            }
+//            .background(Color("BackgroundColor"))
+        }
+    }
+}
+struct FAQView: View {
+    var body: some View {
+        VStack(alignment: .center) {
+            Image("QuestionMark")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30)
+                .padding(.top, 20)
+            
+            Text("Frequently Asked Questions")
+                .bold()
+                .padding(.bottom, 40)
+                .padding(.top, 10)
+                
+            
+            var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
+            
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(FAQList, id: \.id) {
+                    FAQ in
+                    NavigationLink(destination: FAQpage(FAQ: FAQ)) {
+                        FAQbutton(FAQ: FAQ)
                     }
                 }
             }
         }
+        .padding()
+        .padding(.top)
+        .padding(.bottom, 500)
+        .background(Color("BackgroundColor"))
+        .cornerRadius(60.0)
     }
 }
-
+            
+            
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

@@ -16,6 +16,7 @@ struct Application: App {
             NavigationStack {
                 OnboardingView()
                 AuthenticationView()
+                    .environmentObject(LoginManager())
             }
         }
     }
@@ -47,10 +48,6 @@ struct MainView: View {
                     .tabItem{
                         Image(systemName: "person.crop.circle")
                         Text("Profile")}
-                // Text("Clinic")
-                //     .tabItem{
-                //         Image(systemName: "cross.case")
-                //         Text("Clinic")}
                 
                 EncyclopediaView()
                     .tabItem{
@@ -62,7 +59,6 @@ struct MainView: View {
                         Image(systemName: "??")
                         Text("Settings")}
             }
-            
             // If onboarding screen hasn't been displayed yet
             .fullScreenCover(isPresented: .constant(!hasSeenOnboarding),
                              content: {

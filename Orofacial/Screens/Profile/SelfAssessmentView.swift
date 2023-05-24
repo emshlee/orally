@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SelfAssessmentView: View {
+    
     var body: some View {
         VStack(spacing: 40) {
             HStack{
@@ -32,6 +33,9 @@ struct SelfAssessmentView: View {
                     .foregroundColor(.gray)
                 
                 // should display options
+                // Hard coded for now but it shouldn't be
+                AssessmentAnswerRow(answer: AssessmentAnswer(text: "Yes", score: 1))
+                AssessmentAnswerRow(answer: AssessmentAnswer(text: "No", score: 0))
                 
                 Spacer()
                 HStack{
