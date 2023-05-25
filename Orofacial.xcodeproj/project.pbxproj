@@ -75,6 +75,8 @@
 		BEA7AB422A1BF5B7007B0FAE /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BEA7AB412A1BF5B7007B0FAE /* FirebaseRemoteConfigSwift */; };
 		BEA7AB442A1BF5B7007B0FAE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BEA7AB432A1BF5B7007B0FAE /* FirebaseStorage */; };
 		BEA7AB462A1BF5B7007B0FAE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BEA7AB452A1BF5B7007B0FAE /* FirebaseStorageCombine-Community */; };
+		BEA7AB4A2A1EFD71007B0FAE /* DentalInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */; };
+		BEA7AB4C2A1EFE74007B0FAE /* DentalInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */; };
 		BEE0304229D2266100DE9929 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304129D2266100DE9929 /* OnboardingItem.swift */; };
 		BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */; };
 		BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */; };
@@ -144,6 +146,8 @@
 		BEA7AB072A12C369007B0FAE /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		BEA7AB0B2A17087B007B0FAE /* SymptomAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomAssessment.swift; sourceTree = "<group>"; };
 		BEA7AB0D2A1711CA007B0FAE /* SymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomView.swift; sourceTree = "<group>"; };
+		BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoButton.swift; sourceTree = "<group>"; };
+		BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoPage.swift; sourceTree = "<group>"; };
 		BEE0304129D2266100DE9929 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViews.swift; sourceTree = "<group>"; };
@@ -326,6 +330,7 @@
 			children = (
 				BEA7AAE12A0ADF58007B0FAE /* Component */,
 				BEA7AAD72A0AC524007B0FAE /* HomeView.swift */,
+				BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */,
 			);
 			path = "Dental info";
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				BEA7AAEC2A11C178007B0FAE /* PrimaryButton.swift */,
 				BEA7AAEE2A11C88A007B0FAE /* ProgressBar.swift */,
 				BEA7AAFC2A12ADC1007B0FAE /* LoginButton.swift */,
+				BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -570,6 +576,7 @@
 				BEA7AAE52A0AF3A1007B0FAE /* Condition.swift in Sources */,
 				BEE0305029D22D7900DE9929 /* PlistManager.swift in Sources */,
 				BEA7AAD32A09F85D007B0FAE /* UserViewModel.swift in Sources */,
+				BEA7AB4A2A1EFD71007B0FAE /* DentalInfoButton.swift in Sources */,
 				BEA7AB082A12C369007B0FAE /* LoginManager.swift in Sources */,
 				BE40818829C972F00058C97B /* LoginView.swift in Sources */,
 				BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */,
@@ -587,6 +594,7 @@
 				BE40818629C970400058C97B /* CircleGroupView.swift in Sources */,
 				BEA7AAF92A11EB30007B0FAE /* ProfileSetUpView.swift in Sources */,
 				BEA7AAEF2A11C88A007B0FAE /* ProgressBar.swift in Sources */,
+				BEA7AB4C2A1EFE74007B0FAE /* DentalInfoPage.swift in Sources */,
 				BEA7AABF2A09AFC4007B0FAE /* EncyclopediaView.swift in Sources */,
 				BEA7AADA2A0AC572007B0FAE /* MainView.swift in Sources */,
 				BEA7AAE32A0AE5BA007B0FAE /* FAQpage.swift in Sources */,
