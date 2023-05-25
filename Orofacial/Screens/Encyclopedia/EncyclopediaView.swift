@@ -4,39 +4,37 @@
 //
 //  Created by Emma Sihyun Lee on 2023-05-08.
 //
-
 import SwiftUI
 
 struct EncyclopediaView: View {
-    var body: some View{
-        NavigationView{
-            ZStack{
-                // Image("HomeBackground")
-                //    .resizable()
-                //    .ignoresSafeArea(.all, edges: .top)
-                //    .frame(width:400, height:710)
-                VStack{
-                    Spacer()
-                    Spacer()
-                    Text("Encyclopedia")
-                        .font(.system(size:30))
-                        .bold()
-                    Spacer()
-                    Button("Button"){
-                        //button action
+    var columns = Array(repeating: GridItem(.flexible()), count: 2)
+    @State var text = ""
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("Encyclopedia")
+                    .font(.title)
+                    .bold()
+                    
+                SearchBar(text: $text)
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(EncyclopediaList.filter({
+                            $0.name.lowercased().contains(text.lowercased()) || text.isEmpty
+                        })) { Encyclopedia in
+                            NavigationLink(destination: EncyclopediaPage(Encyclopedia: Encyclopedia)) {
+                                EncyclopediaButton(Encyclopedia: Encyclopedia)
+                            }
+                        }
+                      
                     }
-                    .foregroundColor(.white)
-                    .frame(width:300, height:50)
-                    .background(Color.black)
-                    .cornerRadius(10)
-                    .font(.system(size:20))
-                    Spacer()
-                    Spacer()
-                    Spacer()
                 }
             }
+            
+            
         }
-        
     }
 }
 
