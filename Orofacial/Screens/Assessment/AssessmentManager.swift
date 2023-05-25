@@ -79,6 +79,7 @@ class AssessmentManager: ObservableObject {
             endAssessment()
         }
     }
+    
     func endAssessment() {
         reachedEnd = true
     }
@@ -93,18 +94,23 @@ class AssessmentManager: ObservableObject {
         }
     }
     
+    func selected() {
+        answerSelected = true
+    }
+    
+    func unSelected() {
+        answerSelected = false
+    }
+    
     func selectAnswer(answer: AssessmentAnswer) {
         answerSelected = true
         score += answer.score
     }
     
-//    func loadQuestions() {
-//        questions = [
-//            Question(id: 1, text: "Do you have a fever?", options: ["Option1", "Option2"]),
-//            Question(id: 2, text: "Are you experiencing coughing?", options: ["Option1", "Option2"]),
-//            // Add more questions as needed
-//        ]
-//    }
+    func unSelectAnswer(answer: AssessmentAnswer) {
+        answerSelected = false
+        score -= answer.score
+    }
     
 //    func displayQuestion(_ question: Question) {
 //        print(question.text)

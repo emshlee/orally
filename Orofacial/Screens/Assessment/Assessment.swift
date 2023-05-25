@@ -31,37 +31,37 @@ import Foundation
 //    }
 //}
 
-class Question {
-    var id: Int
-    var text: String
-    var options: [AssessmentAnswer]
-    
-    init(id: Int, text: String, options: [AssessmentAnswer]) {
-        self.id = id
-        self.text = text
-        self.options = options
-    }
-}
+//class Question {
+//    var id: Int
+//    var text: String
+//    var options: [AssessmentAnswer]
+//    
+//    init(id: Int, text: String, options: [AssessmentAnswer]) {
+//        self.id = id
+//        self.text = text
+//        self.options = options
+//    }
+//}
 
 // The superclass
 class Assessment {
-    var questions: [Question] = []
-    var userResponses: [Int: String] = [:]
-    
+    var questions: [Question]
+    var userResponses: [Int: String]
+//    
     init(questions: [Question], userResponses: [Int : String]) {
         self.questions = questions
         self.userResponses = userResponses
     }
-    
-    func loadQuestions() { }
-    
-    func displayQuestion(_ question: Question) { }
-    
-    func collectUserResponses() { }
-    
-    func getResult() { }
-    
-    func startAssessment() { }
+//    
+//    func loadQuestions() { }
+//    
+//    func displayQuestion(_ question: Question) { }
+//    
+//    func collectUserResponses() { }
+//    
+//    func getResult() { }
+//    
+//    func startAssessment() { }
 }
 
 //let assessment = Assessment()

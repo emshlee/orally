@@ -349,8 +349,6 @@
 				BEA7AABC2A09AF7B007B0FAE /* ProfileView.swift */,
 				BEA7AAF82A11EB30007B0FAE /* ProfileSetUpView.swift */,
 				BEA7AAE92A0C92CF007B0FAE /* SelfAssessmentView.swift */,
-				BEA7AAF42A11D607007B0FAE /* AssessmentAnswer.swift */,
-				BEA7AAF62A11DAE0007B0FAE /* AssessmentAnswerRow.swift */,
 				BEA7AAFA2A11EC02007B0FAE /* UserInfo.swift */,
 			);
 			path = Profile;
@@ -383,8 +381,10 @@
 			isa = PBXGroup;
 			children = (
 				BEA7AAF02A11CFAD007B0FAE /* Assessment.swift */,
+				BEA7AAF42A11D607007B0FAE /* AssessmentAnswer.swift */,
 				BEA7AB0B2A17087B007B0FAE /* SymptomAssessment.swift */,
 				BEA7AAF22A11D154007B0FAE /* AssessmentManager.swift */,
+				BEA7AAF62A11DAE0007B0FAE /* AssessmentAnswerRow.swift */,
 				BEA7AB0D2A1711CA007B0FAE /* SymptomView.swift */,
 			);
 			path = Assessment;
