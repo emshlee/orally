@@ -22,13 +22,16 @@ struct HomeView: View {
                 ScrollView (.vertical) {
                     VStack{
                         VStack{
+                            Image("AppLogo")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 300)
                             
-                            Text("Hi, I'm Orally. \nI can help you learn more about your oral health.")
-                                .font(.system(size: 28))
-                                .bold()
+                            Text("Learn more about your oral health")
+                                .font(.system(size: 20))
                                 .padding(.horizontal, 30)
-                                .padding(.vertical, 45)
-                                .padding(.bottom, -22)
+                                .padding(.vertical, 8)
+//                                .padding(.bottom)
                             
                             NavigationLink {
                                 // where it should lead to
