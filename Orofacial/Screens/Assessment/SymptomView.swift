@@ -31,11 +31,12 @@ struct SymptomPage: View {
                 }
                 ProgressBar(progress: assessmentManager.progress)
                 
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(alignment: .center, spacing: 20) {
                     Text(assessmentManager.currentQuestion.text)
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.gray)
+                        .padding(.bottom)
                     
                     ForEach(assessmentManager.answerChoices, id: \.id) { answer in
                         AssessmentAnswerRow(answer: answer)
@@ -50,13 +51,21 @@ struct SymptomPage: View {
 //                        .environmentObject(assessmentManager)
                     
                     Spacer()
-                    Button {
-                        assessmentManager.goToNextQuestion()
-                    } label: {
-                        PrimaryButton(text: "Next", background: assessmentManager.answerSelected ? Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
-                    }
-                    .disabled(assessmentManager.answerSelected)
-                    
+                    if (assessmentManager.index + 1 == assessmentManager.length) {
+                        NavigationLink { EndView().environmentObject(assessmentManager) } label: {
+                            PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
+                                          Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                        }
+                        .navigationBarBackButtonHidden(true)
+                    } else {
+                            Button {
+                                assessmentManager.goToNextQuestion()
+                            } label: {
+                                PrimaryButton(text: "Next", background: assessmentManager.answerSelected ?
+                                              Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                            }
+                            .disabled(!assessmentManager.answerSelected)
+                        }
                     Spacer()
 //                    HStack{
 //                        NavigationLink {
@@ -81,17 +90,41 @@ struct SymptomPage: View {
         }
     }
 
+struct EndView: View {
+    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment(questions: [Question(id: 1, text: "Do you have a fever?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]), Question(id: 2, text: "Are you experiencing coughing?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])], userResponses: [ : ]))
+    
+    var body: some View {
+        VStack {
+            Text("The score is: \(assessmentManager.score). The medical condition associated with this score should be displayed here")
+                .padding()
+            
+            NavigationLink {
+                HomeView()
+                    .navigationBarBackButtonHidden(true)
+            } label: {
+                PrimaryButton(text: "Exit")
+            }
+            .navigationBarBackButtonHidden(true)
+        }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color("BackgroundColor"))
+    }
+    
+}
+
+
 struct SymptomView: View {
     @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment(questions: [Question(id: 1, text: "Do you have a fever?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]), Question(id: 2, text: "Are you experiencing coughing?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])], userResponses: [ : ]))
     
     var body: some View {
-        if assessmentManager.reachedEnd {
-            Text("\(assessmentManager.score)")
-        } else {
+//        if assessmentManager.reachedEnd {
+//            Text("\(assessmentManager.score)")
+//        } else {
             SymptomPage()
+            .navigationBarBackButtonHidden(true)
         }
     }
-}
 
 struct SymptomView_Previews: PreviewProvider {
     static var previews: some View {

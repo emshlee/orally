@@ -32,9 +32,11 @@ struct HomeView: View {
                             
                             NavigationLink {
                                 // where it should lead to
+                                SymptomView()
                             } label: {
                                 PrimaryButton(text: "Start Symptom Assessment")
                             }
+                    
                         }
                         .padding(.top, 30)
                         .padding(.bottom, 80)

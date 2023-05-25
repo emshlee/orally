@@ -76,8 +76,11 @@ class AssessmentManager: ObservableObject {
             // Setting new question
             setQuestion()
         } else {
-            reachedEnd = true
+            endAssessment()
         }
+    }
+    func endAssessment() {
+        reachedEnd = true
     }
     
     func setQuestion() {
@@ -92,7 +95,7 @@ class AssessmentManager: ObservableObject {
     
     func selectAnswer(answer: AssessmentAnswer) {
         answerSelected = true
-        score += 1
+        score += answer.score
     }
     
 //    func loadQuestions() {

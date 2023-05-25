@@ -48,6 +48,7 @@ struct AuthenticationView: View {
 //                    .background(Color.blue)
 //                    .cornerRadius(10)
             }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
