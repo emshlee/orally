@@ -34,8 +34,7 @@ struct SelfAssessmentView: View {
                 
                 // should display options
                 // Hard coded for now but it shouldn't be
-                AssessmentAnswerRow(answer: AssessmentAnswer(text: "Yes", score: 1))
-                AssessmentAnswerRow(answer: AssessmentAnswer(text: "No", score: 0))
+                AssessmentAnswerRow(answer: [ AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])
                 
                 Spacer()
                 HStack{

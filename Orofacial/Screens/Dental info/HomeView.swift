@@ -39,6 +39,15 @@ struct HomeView: View {
                             } label: {
                                 PrimaryButton(text: "Start Symptom Assessment")
                             }
+                            .padding()
+                            
+                            NavigationLink {
+                                // where it should lead to
+                                DentalInfoPage()
+                            } label: {
+                                DentalInfoButton()
+                            }
+                            
                     
                         }
                         .padding(.top, 30)

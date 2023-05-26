@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SymptomPage: View {
     
-    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment(questions: [Question(id: 1, text: "Do you have a fever?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]), Question(id: 2, text: "Are you experiencing coughing?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])], userResponses: [ : ]))
+    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment())
     
         
     @State private var currentQuestionIndex = 0
@@ -38,10 +38,13 @@ struct SymptomPage: View {
                         .foregroundColor(.gray)
                         .padding(.bottom)
                     
-                    ForEach(assessmentManager.answerChoices, id: \.id) { answer in
-                        AssessmentAnswerRow(answer: answer)
-                            .environmentObject(assessmentManager)
-                    }
+//                    ForEach(assessmentManager.answerChoices, id: \.id) { answer in
+//                        AssessmentAnswerRow(answer: answer)
+//                            .environmentObject(assessmentManager)
+//                    }
+                    
+                    AssessmentAnswerRow(answer: assessmentManager.answerChoices)
+                        .environmentObject(assessmentManager)
                     
                     // should display options
                     // Hard coded for now but it shouldn't be
@@ -52,7 +55,7 @@ struct SymptomPage: View {
                     
                     Spacer()
                     if (assessmentManager.index + 1 == assessmentManager.length) {
-                        NavigationLink { EndView().environmentObject(assessmentManager) } label: {
+                        NavigationLink { EndView(assessmentManager: assessmentManager)} label: {
                             PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
                                           Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
                         }
@@ -91,7 +94,7 @@ struct SymptomPage: View {
     }
 
 struct EndView: View {
-    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment(questions: [Question(id: 1, text: "Do you have a fever?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]), Question(id: 2, text: "Are you experiencing coughing?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])], userResponses: [ : ]))
+    @StateObject var assessmentManager: AssessmentManager
     
     var body: some View {
         VStack {
@@ -115,7 +118,7 @@ struct EndView: View {
 
 
 struct SymptomView: View {
-    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment(questions: [Question(id: 1, text: "Do you have a fever?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]), Question(id: 2, text: "Are you experiencing coughing?", options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])], userResponses: [ : ]))
+    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment())
     
     var body: some View {
 //        if assessmentManager.reachedEnd {
