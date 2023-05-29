@@ -10,14 +10,14 @@ import SwiftUI
 struct DentalInfoButton: View {
     var body: some View {
         ZStack(alignment: .bottom) {
-            Image("HomeBackground")
+            Image("Basic dental info")
                 .resizable()
                 .cornerRadius(20)
-                .frame(width: 330)
+                .frame(width: 300)
                 .scaledToFit()
             
             VStack(alignment: .leading) {
-                Text("hello")
+                Text("Basic Dental Info")
                     .font(.headline)
                     .foregroundColor(.white)
                     .shadow(color: .black, radius: 3, x: 0, y: 0)
@@ -29,7 +29,7 @@ struct DentalInfoButton: View {
             .background(.ultraThinMaterial)
             .cornerRadius(20)
         }
-        .frame(width: 180, height: 200)
+        .frame(width: 80, height: 200)
     }
 }
 
