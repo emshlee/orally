@@ -13,6 +13,7 @@
 		3A67BD4729D61B2B00296FCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A67BD4629D61B2B00296FCE /* GoogleService-Info.plist */; };
 		4AD7372829D534A500A54A26 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7372729D534A500A54A26 /* UserInfoView.swift */; };
 		676F32752A25550C00485E0F /* DentalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F32742A25550C00485E0F /* DentalInfo.swift */; };
+		AE553CED2A279FD00072CE58 /* TeethView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE553CEC2A279FD00072CE58 /* TeethView.swift */; };
 		BE02B58B29B0189300CA5C84 /* OrofacialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */; };
 		BE02B58D29B0189300CA5C84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE02B58C29B0189300CA5C84 /* ContentView.swift */; };
 		BE02B58F29B0189400CA5C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE02B58E29B0189400CA5C84 /* Assets.xcassets */; };
@@ -113,6 +114,7 @@
 		3A67BD4629D61B2B00296FCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4AD7372729D534A500A54A26 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		676F32742A25550C00485E0F /* DentalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DentalInfo.swift; path = "Orofacial/Screens/Dental info/DentalInfo.swift"; sourceTree = SOURCE_ROOT; };
+		AE553CEC2A279FD00072CE58 /* TeethView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeethView.swift; sourceTree = "<group>"; };
 		BE02B58729B0189300CA5C84 /* Orofacial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orofacial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialApp.swift; sourceTree = "<group>"; };
 		BE02B58C29B0189300CA5C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				676F32742A25550C00485E0F /* DentalInfo.swift */,
 				BEA7AAD72A0AC524007B0FAE /* HomeView.swift */,
 				BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */,
+				AE553CEC2A279FD00072CE58 /* TeethView.swift */,
 			);
 			path = "Dental info";
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				BEA7AADE2A0AD42C007B0FAE /* FAQbutton.swift in Sources */,
 				BEA7AAE52A0AF3A1007B0FAE /* EncyclopediaPage.swift in Sources */,
 				BEE0305029D22D7900DE9929 /* PlistManager.swift in Sources */,
+				AE553CED2A279FD00072CE58 /* TeethView.swift in Sources */,
 				BEA7AAD32A09F85D007B0FAE /* UserViewModel.swift in Sources */,
 				BEA7AB4A2A1EFD71007B0FAE /* DentalInfoButton.swift in Sources */,
 				BEA7AB082A12C369007B0FAE /* LoginManager.swift in Sources */,
