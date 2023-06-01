@@ -43,7 +43,7 @@ struct SymptomPage: View {
 //                            .environmentObject(assessmentManager)
 //                    }
                     
-                    AssessmentAnswerRow(answer: assessmentManager.answerChoices)
+                    AssessmentAnswerRow(answer: assessmentManager.answerChoices, oneSelected: false, twoSelected: false)
                         .environmentObject(assessmentManager)
                     
                     // should display options
@@ -62,6 +62,7 @@ struct SymptomPage: View {
                         .navigationBarBackButtonHidden(true)
                     } else {
                             Button {
+                                
                                 assessmentManager.goToNextQuestion()
                             } label: {
                                 PrimaryButton(text: "Next", background: assessmentManager.answerSelected ?

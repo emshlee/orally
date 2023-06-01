@@ -16,26 +16,7 @@ struct FAQ: Identifiable {
 
 let faq3 = """
 We have different types of teeth, and each one has its own function. There are four types of permanent teeth in humans:
-- Incisors
-- Canines
-- Premolars
-- Molars
 
-Incisors
-
-Incisors are the most noticeable teeth in your mouth. Typically, people have four incisors on both the upper and lower jaws. These teeth have a narrow edge that helps to cut food when you bite.
-
-Canines
-
-Canines, often referred to as "eye teeth," get their name from their resemblance to a dog's fangs. They are pointy and used for tearing into foods like meat and crunchy vegetables. Most people have four canines - one in each quadrant.
-
-Premolars
-
-Premolars, also known as bicuspids, sit between your canines and molars. They have features of both canines and molars, enabling them to tear, crush, and grind food into smaller pieces.
-
-Molars
-
-Molars are located at the very back of your mouth and serve as your primary chewing teeth, responsible for about 90% of the process. Adults typically have 12 molars - three in each quadrant - including wisdom teeth, also known as third molars. If you don't have wisdom teeth, you likely have eight molars in total. Molars are ideal for crushing and grinding food.
 """
 
 let faq4 = """

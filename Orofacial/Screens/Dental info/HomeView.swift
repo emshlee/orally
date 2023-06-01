@@ -14,11 +14,6 @@ struct HomeView: View {
     var body: some View{
         NavigationView{
             ZStack{
-                // To set up background image:
-                // Image("HomeBackground")
-                //    .resizable()
-                //    .ignoresSafeArea(.all, edges: .top)
-                //    .frame(width:400, height:710)
                 ScrollView (.vertical) {
                     VStack{
                         VStack{
@@ -56,10 +51,9 @@ struct HomeView: View {
                         // Basic dental care
                         
                         FAQView()
-                                                    
-                        
                     }
                 }
+                .ignoresSafeArea(.container, edges: .bottom)
             }
 //            .background(Color("BackgroundColor"))
         }
@@ -93,7 +87,7 @@ struct FAQView: View {
         }
         .padding()
         .padding(.top)
-        .padding(.bottom, 500)
+        .padding(.bottom, 50)
         .background(Color("BackgroundColor"))
         .cornerRadius(60.0)
     }
