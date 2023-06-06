@@ -52,7 +52,6 @@ struct AuthenticationView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
-        .navigationTitle("Sign In")
         
         // BUTTON 2 - ??
     }

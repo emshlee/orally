@@ -25,12 +25,6 @@ struct ContentView: View {
             .edgesIgnoringSafeArea(.all)
             .alert(isPresented: $loginManager.showAlert) {
                 Alert(title: Text("Error"), message: Text(loginManager.errorDescription ?? "Error trying to login with credentials, please try again"))
-                
-                
-                
-                
-                
-                
             }
             // The sliding intro pages that should only be displayed at the first launch of the app
             .fullScreenCover(isPresented: .constant(!hasSeenOnboarding),

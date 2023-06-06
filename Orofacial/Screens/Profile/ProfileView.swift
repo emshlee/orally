@@ -17,34 +17,38 @@ struct ProfileView: View {
                     VStack{
                         if userSetUp == false {
                             // User info not set up yet
-                                Image("logo-teeth")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 300, height: 200)
-                                    .padding(22)
-                                    .padding(.top, 80)
-                                
-                                Text("Welcome!")
-                                    .font(.title)
-                                    .font(.system(size:50))
-                                    .fontWeight(.heavy)
-                                    .foregroundColor(Color("AccentColor"))
-                                    .padding(.bottom, 30)
-                                
-                                NavigationLink {
-                                    ProfileSetUpView(user: UserInfo(userName: "", age: 0, gender: "", sex: ""))
-                                } label: {
-                                    PrimaryButton(text: "Set up profile")
-                                }
-                        } else {
-                            // Display user information
-                            Text("Welcome")
+                            Image("AppLogo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 300, height: 200)
+                                .padding(22)
+                                .padding(.top, 80)
+                            
+                            Text("Welcome!")
                                 .font(.title)
                                 .font(.system(size:50))
                                 .fontWeight(.heavy)
                                 .foregroundColor(Color("AccentColor"))
-                                .padding(.top, 30)
                                 .padding(.bottom, 30)
+                            
+                            NavigationLink {
+                                ProfileSetUpView(user: UserInfo(userName: "", age: 0, gender: "", sex: ""))
+                            } label: {
+                                PrimaryButton(text: "Set up profile")
+                            }
+                        } else {
+                            // Display user information
+                            
+                            Logo()
+                                .padding()
+                            
+//                            Text("Welcome.")
+//                                .font(.title)
+//                                .font(.system(size:50))
+//                                .fontWeight(.heavy)
+//                                .foregroundColor(Color("AccentColor"))
+//                                .padding(.top, 30)
+//                                .padding(.bottom, 30)
                             
                             NavigationLink {
                                 SelfAssessmentView()
@@ -52,19 +56,12 @@ struct ProfileView: View {
                             } label: {
                                 PrimaryButton(text: "Start self assessment")
                             }
-        //                    Button("Start self assessment"){
-        //                        SelfAssessmentView()
-        //                    }
-        //                    .foregroundColor(.white)
-        //                    .frame(width:300, height:50)
-        //                    .background(Color.black)
-        //                    .cornerRadius(10)
-        //                    .font(.system(size:20))
                         }
                     }
                 }
             }
         }
+        
     }
 }
 

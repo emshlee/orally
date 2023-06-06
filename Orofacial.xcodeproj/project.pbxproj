@@ -85,6 +85,8 @@
 		BEA7AB462A1BF5B7007B0FAE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BEA7AB452A1BF5B7007B0FAE /* FirebaseStorageCombine-Community */; };
 		BEA7AB4A2A1EFD71007B0FAE /* DentalInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */; };
 		BEA7AB4C2A1EFE74007B0FAE /* DentalInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */; };
+		BED22F612A2EB5CA0069FFB0 /* SelfAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */; };
+		BED22F632A2EBA420069FFB0 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F622A2EBA420069FFB0 /* Logo.swift */; };
 		BEE0304229D2266100DE9929 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304129D2266100DE9929 /* OnboardingItem.swift */; };
 		BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */; };
 		BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */; };
@@ -164,6 +166,8 @@
 		BEA7AB0D2A1711CA007B0FAE /* SymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomView.swift; sourceTree = "<group>"; };
 		BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoButton.swift; sourceTree = "<group>"; };
 		BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoPage.swift; sourceTree = "<group>"; };
+		BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessment.swift; sourceTree = "<group>"; };
+		BED22F622A2EBA420069FFB0 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		BEE0304129D2266100DE9929 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
 		BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViews.swift; sourceTree = "<group>"; };
@@ -274,7 +278,6 @@
 				3A67BD4629D61B2B00296FCE /* GoogleService-Info.plist */,
 				BEE0304029D2263000DE9929 /* Onboarding */,
 				BE40818029C9579F0058C97B /* Views */,
-				BE40817F29C957980058C97B /* Fonts */,
 				BE40817E29C9575A0058C97B /* Screens */,
 				BE02B58E29B0189400CA5C84 /* Assets.xcassets */,
 				BE02B59029B0189400CA5C84 /* Preview Content */,
@@ -320,13 +323,6 @@
 				BEA7AAC12A09B035007B0FAE /* SettingsView.swift */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		BE40817F29C957980058C97B /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		BE40818029C9579F0058C97B /* Views */ = {
@@ -390,6 +386,7 @@
 				BEA7AAF82A11EB30007B0FAE /* ProfileSetUpView.swift */,
 				BEA7AAE92A0C92CF007B0FAE /* SelfAssessmentView.swift */,
 				BEA7AAFA2A11EC02007B0FAE /* UserInfo.swift */,
+				BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -404,6 +401,7 @@
 				BEA7AAEE2A11C88A007B0FAE /* ProgressBar.swift */,
 				BEA7AAFC2A12ADC1007B0FAE /* LoginButton.swift */,
 				BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */,
+				BED22F622A2EBA420069FFB0 /* Logo.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -631,6 +629,8 @@
 				BEA7AB0C2A17087B007B0FAE /* SymptomAssessment.swift in Sources */,
 				4AD7372829D534A500A54A26 /* UserInfoView.swift in Sources */,
 				BEA7AAC42A09B449007B0FAE /* RootView.swift in Sources */,
+				BED22F632A2EBA420069FFB0 /* Logo.swift in Sources */,
+				BED22F612A2EB5CA0069FFB0 /* SelfAssessment.swift in Sources */,
 				BEA7AAB42A099F35007B0FAE /* AuthenticationView.swift in Sources */,
 				BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */,
 				BE40818629C970400058C97B /* CircleGroupView.swift in Sources */,

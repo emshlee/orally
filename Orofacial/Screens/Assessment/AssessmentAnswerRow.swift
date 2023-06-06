@@ -34,6 +34,10 @@ struct AssessmentAnswerRow: View {
             .background(.white)
             .cornerRadius(10)
             .shadow(color: oneSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
+            .onAppear(perform: {
+                oneSelected = false
+                twoSelected = false
+            })
             .onTapGesture {
                 // Second option was already selected
                 print("Before clicking, option1: \(oneSelected), option2: \(twoSelected)")
@@ -73,6 +77,10 @@ struct AssessmentAnswerRow: View {
             .background(.white)
             .cornerRadius(10)
             .shadow(color: twoSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
+            .onAppear(perform: {
+                oneSelected = false
+                twoSelected = false
+            })
             .onTapGesture {
                 if (oneSelected == true) {
                     oneSelected.toggle()

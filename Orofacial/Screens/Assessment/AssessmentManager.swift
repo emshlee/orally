@@ -85,7 +85,7 @@ class AssessmentManager: ObservableObject {
     }
     
     func setQuestion() {
-        answerSelected = false
+//        answerSelected = false
         progress = CGFloat(Double(index + 1) / Double(length) * 350)
 
         if index < length {
