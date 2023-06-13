@@ -87,6 +87,7 @@
 		BEA7AB4C2A1EFE74007B0FAE /* DentalInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */; };
 		BED22F612A2EB5CA0069FFB0 /* SelfAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */; };
 		BED22F632A2EBA420069FFB0 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F622A2EBA420069FFB0 /* Logo.swift */; };
+		BED22F662A349C7A0069FFB0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BED22F652A349C7A0069FFB0 /* SwiftUICharts */; };
 		BEE0304229D2266100DE9929 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304129D2266100DE9929 /* OnboardingItem.swift */; };
 		BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */; };
 		BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */; };
@@ -190,6 +191,7 @@
 				BEA7AB122A1BF5B7007B0FAE /* FirebaseAnalytics in Frameworks */,
 				BEA7AB1E2A1BF5B7007B0FAE /* FirebaseAuth in Frameworks */,
 				BEA7AB282A1BF5B7007B0FAE /* FirebaseDynamicLinks in Frameworks */,
+				BED22F662A349C7A0069FFB0 /* SwiftUICharts in Frameworks */,
 				BEA7AB222A1BF5B7007B0FAE /* FirebaseCrashlytics in Frameworks */,
 				BEA7AB3A2A1BF5B7007B0FAE /* FirebaseMLModelDownloader in Frameworks */,
 				BEA7AB262A1BF5B7007B0FAE /* FirebaseDatabaseSwift in Frameworks */,
@@ -487,6 +489,7 @@
 				BEA7AB412A1BF5B7007B0FAE /* FirebaseRemoteConfigSwift */,
 				BEA7AB432A1BF5B7007B0FAE /* FirebaseStorage */,
 				BEA7AB452A1BF5B7007B0FAE /* FirebaseStorageCombine-Community */,
+				BED22F652A349C7A0069FFB0 /* SwiftUICharts */,
 			);
 			productName = Orofacial;
 			productReference = BE02B58729B0189300CA5C84 /* Orofacial.app */;
@@ -563,6 +566,7 @@
 			packageReferences = (
 				BEA7AAFE2A12B313007B0FAE /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				BEA7AB102A1BF5B6007B0FAE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BED22F642A349C7A0069FFB0 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = BE02B58829B0189300CA5C84 /* Products */;
 			projectDirPath = "";
@@ -998,6 +1002,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		BED22F642A349C7A0069FFB0 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1145,6 +1157,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BEA7AB102A1BF5B6007B0FAE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		BED22F652A349C7A0069FFB0 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BED22F642A349C7A0069FFB0 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

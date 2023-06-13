@@ -22,4 +22,6 @@ class SelfAssessment : Assessment {
                                         options: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])
         ], userResponses: [:])
     }
+
+    
 }

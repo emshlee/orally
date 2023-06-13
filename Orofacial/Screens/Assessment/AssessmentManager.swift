@@ -81,6 +81,7 @@ class AssessmentManager: ObservableObject {
     }
     
     func endAssessment() {
+        assessment.scores.append(Double(score))
         reachedEnd = true
     }
     

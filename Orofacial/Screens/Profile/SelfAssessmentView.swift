@@ -35,24 +35,12 @@ struct SelfAssessmentView: View {
                         .foregroundColor(.gray)
                         .padding(.bottom)
                     
-//                    ForEach(assessmentManager.answerChoices, id: \.id) { answer in
-//                        AssessmentAnswerRow(answer: answer)
-//                            .environmentObject(assessmentManager)
-//                    }
-                    
                     AssessmentAnswerRow(answer: assessmentManager.answerChoices, oneSelected: false, twoSelected: false)
                         .environmentObject(assessmentManager)
                     
-                    // should display options
-                    // Hard coded for now but it shouldn't be
-//                    AssessmentAnswerRow(answer: AssessmentAnswer(text: "Yes", score: 1))
-//                        .environmentObject(assessmentManager)
-//                    AssessmentAnswerRow(answer: AssessmentAnswer(text: "No", score: 0))
-//                        .environmentObject(assessmentManager)
-                    
                     Spacer()
                     if (assessmentManager.index + 1 == assessmentManager.length) {
-                        NavigationLink { SelfEndView(assessmentManager: assessmentManager)} label: {
+                        NavigationLink { SelfEndView(assessmentManager: assessmentManager) } label: {
                             PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
                                           Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
                         }
@@ -68,21 +56,6 @@ struct SelfAssessmentView: View {
                             .disabled(!assessmentManager.answerSelected)
                         }
                     Spacer()
-//                    HStack{
-//                        NavigationLink {
-//                            // where it should lead to
-//                        } label: {
-//                            PrimaryButton(text: "Back")
-//                        }
-//
-//                        Spacer()
-//
-//                        NavigationLink {
-//                            // where it should lead to
-//                        } label: {
-//                            PrimaryButton(text: "Next")
-//                        }
-//                    }
                 }
             }
             .padding()
@@ -93,14 +66,16 @@ struct SelfAssessmentView: View {
 
 struct SelfEndView: View {
     @StateObject var assessmentManager: AssessmentManager
+    var profileView : ProfileView = ProfileView(scores: [0])
     
     var body: some View {
         VStack {
             Text("The score is: \(assessmentManager.score). The result should be displayed here")
                 .padding()
             
+            
             NavigationLink {
-                HomeView()
+                ProfileView(scores: profileView.scores + [Double(assessmentManager.score)])
                     .navigationBarBackButtonHidden(true)
             } label: {
                 PrimaryButton(text: "Exit")

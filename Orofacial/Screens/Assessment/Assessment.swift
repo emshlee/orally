@@ -47,6 +47,7 @@ import Foundation
 class Assessment {
     var questions: [Question]
     var userResponses: [Int: String]
+    var scores: [Double] = []
 //    
     init(questions: [Question], userResponses: [Int : String]) {
         self.questions = questions
