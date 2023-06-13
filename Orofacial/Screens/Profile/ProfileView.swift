@@ -10,6 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     @State var userSetUp: Bool = true
     
+    var scores : [Double] = [0.0]
+    
     var body: some View{
         ZStack {
             NavigationView{
