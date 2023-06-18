@@ -41,7 +41,7 @@ struct MainView: View {
             TabView {
                 HomeView()
                     .tabItem{
-                        Image(systemName: "house")
+                        Image(systemName: "house") // SF Symbols
                         Text("Home")}
                 
                 ProfileView()
@@ -56,7 +56,7 @@ struct MainView: View {
                 
                 SettingsView(showSignInView: $showSignInView)
                     .tabItem{
-                        Image(systemName: "??")
+                        Image(systemName: "gearshape")
                         Text("Settings")}
             }
             // If onboarding screen hasn't been displayed yet

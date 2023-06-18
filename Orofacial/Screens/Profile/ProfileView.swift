@@ -51,6 +51,12 @@ struct ProfileView: View {
 //                                .foregroundColor(Color("AccentColor"))
 //                                .padding(.top, 30)
 //                                .padding(.bottom, 30)
+                            NavigationLink {
+                                UserInfoView()
+                                    //.navigationBarHidden(true)
+                            } label: {
+                                PrimaryButton(text: "Manage User Info")
+                            }
                             
                             NavigationLink {
                                 SelfAssessmentView()
