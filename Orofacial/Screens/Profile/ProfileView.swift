@@ -113,8 +113,8 @@ struct checkup: View {
                 .bold()
                 .padding()
             
-            Text(nextCheckUpDate, format: .dateTime.day().month().year())
-                .padding()
+            Text((Calendar.current.date(byAdding: .day, value: 180, to: checkUpDate) ?? checkUpDate), format: .dateTime.day().month().year())
+                            .padding()
             
         }
         .padding()
@@ -123,9 +123,10 @@ struct checkup: View {
         .background(Color("BackgroundColor"))
         .cornerRadius(60.0)
         .onAppear {
-            nextDate()
+            //nextDate()
         }
     }
+    
     
     func nextDate() {
         let calendar = Calendar.current
