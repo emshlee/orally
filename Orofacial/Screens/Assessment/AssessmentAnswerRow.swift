@@ -10,9 +10,9 @@ import SwiftUI
 struct AssessmentAnswerRow: View {
     @EnvironmentObject var assessmentManager: AssessmentManager
     
-    var answer: [AssessmentAnswer]
-    @State var oneSelected: Bool
-    @State var twoSelected: Bool
+    var answer: [AssessmentAnswer] = [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]
+    static var oneSelected: Bool = false
+    static var twoSelected: Bool = false
     
     var body: some View {
         VStack {
@@ -23,7 +23,7 @@ struct AssessmentAnswerRow: View {
                 Text(answer[0].text)
                     .bold()
                 
-                if oneSelected {
+                if AssessmentAnswerRow.oneSelected {
                     Spacer()
                     
                 }
@@ -33,24 +33,18 @@ struct AssessmentAnswerRow: View {
             .foregroundColor(Color("AccentColor"))
             .background(.white)
             .cornerRadius(10)
-            .shadow(color: oneSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
-            .onAppear(perform: {
-                oneSelected = false
-                twoSelected = false
-            })
+            .shadow(color: AssessmentAnswerRow.oneSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
+        
             .onTapGesture {
                 // Second option was already selected
-                print("Before clicking, option1: \(oneSelected), option2: \(twoSelected)")
-                if (twoSelected == true) {
-                    twoSelected.toggle()
+                if (AssessmentAnswerRow.twoSelected == true) {
+                    AssessmentAnswerRow.twoSelected.toggle()
                     assessmentManager.unSelectAnswer(answer: answer[1])
                 }
                 
-                oneSelected.toggle()
+                AssessmentAnswerRow.oneSelected.toggle()
                 
-                print("After clicking, option1: \(oneSelected), option2: \(twoSelected)\n")
-                
-                if oneSelected {
+                if AssessmentAnswerRow.oneSelected {
                     assessmentManager.selectAnswer(answer: answer[0])
                 } else {
                     assessmentManager.unSelectAnswer(answer: answer[0])
@@ -66,7 +60,7 @@ struct AssessmentAnswerRow: View {
                 Text(answer[1].text)
                     .bold()
                 
-                if twoSelected {
+                if AssessmentAnswerRow.twoSelected {
                     Spacer()
                     
                 }
@@ -76,23 +70,19 @@ struct AssessmentAnswerRow: View {
             .foregroundColor(Color("AccentColor"))
             .background(.white)
             .cornerRadius(10)
-            .shadow(color: twoSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
-            .onAppear(perform: {
-                oneSelected = false
-                twoSelected = false
-            })
+            .shadow(color: AssessmentAnswerRow.twoSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
             .onTapGesture {
-                if (oneSelected == true) {
-                    oneSelected.toggle()
+                if (AssessmentAnswerRow.oneSelected == true) {
+                    AssessmentAnswerRow.oneSelected.toggle()
                     assessmentManager.unSelectAnswer(answer: answer[0])
                 }
                 
-                twoSelected.toggle()
+                AssessmentAnswerRow.twoSelected.toggle()
                 
-                if twoSelected {
-                    assessmentManager.selectAnswer(answer: answer[0])
+                if AssessmentAnswerRow.twoSelected {
+                    assessmentManager.selectAnswer(answer: answer[1])
                 } else {
-                    assessmentManager.unSelectAnswer(answer: answer[0])
+                    assessmentManager.unSelectAnswer(answer: answer[1])
                 }
             }
         }
@@ -101,7 +91,7 @@ struct AssessmentAnswerRow: View {
     
     struct AssessmentAnswerRow_Previews: PreviewProvider {
         static var previews: some View {
-            AssessmentAnswerRow(answer: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)], oneSelected: false, twoSelected: false)
+            AssessmentAnswerRow(answer: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])
                 .environmentObject(AssessmentManager(pAssessment: SymptomAssessment()))
         }
     }

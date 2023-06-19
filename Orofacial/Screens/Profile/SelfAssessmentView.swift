@@ -35,7 +35,7 @@ struct SelfAssessmentView: View {
                         .foregroundColor(.gray)
                         .padding(.bottom)
                     
-                    AssessmentAnswerRow(answer: assessmentManager.answerChoices, oneSelected: false, twoSelected: false)
+                    AssessmentAnswerRow(answer: assessmentManager.answerChoices)
                         .environmentObject(assessmentManager)
                     
                     Spacer()

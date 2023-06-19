@@ -52,8 +52,6 @@ struct UserInfoView: View {
                                 .autocorrectionDisabled()
                                 .multilineTextAlignment(.trailing)
                             
-                            
-                            
                         }.frame(width: 318, height: 40)
                             .padding()
                             .background(

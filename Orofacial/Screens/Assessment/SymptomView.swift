@@ -18,6 +18,7 @@ struct SymptomPage: View {
     
     var body: some View {
             VStack(spacing: 40) {
+                
                 HStack{
                     Text("Symptom Assessment")
                         .font(.title)
@@ -38,31 +39,22 @@ struct SymptomPage: View {
                         .foregroundColor(.gray)
                         .padding(.bottom)
                     
-//                    ForEach(assessmentManager.answerChoices, id: \.id) { answer in
-//                        AssessmentAnswerRow(answer: answer)
-//                            .environmentObject(assessmentManager)
-//                    }
-                    
-                    AssessmentAnswerRow(answer: assessmentManager.answerChoices, oneSelected: false, twoSelected: false)
+                    AssessmentAnswerRow(answer: assessmentManager.answerChoices)
                         .environmentObject(assessmentManager)
                     
-                    // should display options
-                    // Hard coded for now but it shouldn't be
-//                    AssessmentAnswerRow(answer: AssessmentAnswer(text: "Yes", score: 1))
-//                        .environmentObject(assessmentManager)
-//                    AssessmentAnswerRow(answer: AssessmentAnswer(text: "No", score: 0))
-//                        .environmentObject(assessmentManager)
-                    
                     Spacer()
+                    
                     if (assessmentManager.index + 1 == assessmentManager.length) {
-                        NavigationLink { EndView(assessmentManager: assessmentManager)} label: {
+                        NavigationLink {
+                            EndView(assessmentManager: assessmentManager)
+                        } label: {
                             PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
                                           Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
                         }
                         .navigationBarBackButtonHidden(true)
+                        
                     } else {
                             Button {
-                                
                                 assessmentManager.goToNextQuestion()
                             } label: {
                                 PrimaryButton(text: "Next", background: assessmentManager.answerSelected ?
@@ -70,6 +62,7 @@ struct SymptomPage: View {
                             }
                             .disabled(!assessmentManager.answerSelected)
                         }
+                    
                     Spacer()
 //                    HStack{
 //                        NavigationLink {
@@ -110,6 +103,7 @@ struct EndView: View {
             }
             .navigationBarBackButtonHidden(true)
         }
+        .onDisappear(perform: assessmentManager.goToNextQuestion)
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))

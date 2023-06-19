@@ -44,13 +44,14 @@ struct ProfileView: View {
                             Logo()
                                 .padding()
                             
-//                            Text("Welcome.")
+//                            Text("Welcome \(username)")
 //                                .font(.title)
 //                                .font(.system(size:50))
 //                                .fontWeight(.heavy)
 //                                .foregroundColor(Color("AccentColor"))
 //                                .padding(.top, 30)
 //                                .padding(.bottom, 30)
+                            
                             NavigationLink {
                                 UserInfoView()
                                     //.navigationBarHidden(true)
