@@ -44,14 +44,6 @@ struct ProfileView: View {
                             Logo()
                                 .padding()
                             
-//                            Text("Welcome \(username)")
-//                                .font(.title)
-//                                .font(.system(size:50))
-//                                .fontWeight(.heavy)
-//                                .foregroundColor(Color("AccentColor"))
-//                                .padding(.top, 30)
-//                                .padding(.bottom, 30)
-                            
                             NavigationLink {
                                 UserInfoView()
                                     //.navigationBarHidden(true)
@@ -65,7 +57,10 @@ struct ProfileView: View {
                             } label: {
                                 PrimaryButton(text: "Start self assessment")
                             }
+                            
                             checkup()
+                                .padding()
+                            
                         }
                     }
                 }

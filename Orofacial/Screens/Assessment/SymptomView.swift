@@ -43,17 +43,28 @@ struct SymptomPage: View {
                         .environmentObject(assessmentManager)
                     
                     Spacer()
-                    
-                    if (assessmentManager.index + 1 == assessmentManager.length) {
-                        NavigationLink {
-                            EndView(assessmentManager: assessmentManager)
+                    HStack {
+                        Button {
+                            assessmentManager.goToPrevious()
                         } label: {
-                            PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
+                            PrimaryButton(text: "Back", background: assessmentManager.index != 0 ?
                                           Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
                         }
-                        .navigationBarBackButtonHidden(true)
+                        .disabled(assessmentManager.index == 0)
                         
-                    } else {
+                        Spacer()
+                    
+                        
+                        if (assessmentManager.index + 1 == assessmentManager.length) {
+                            NavigationLink {
+                                EndView(assessmentManager: assessmentManager)
+                            } label: {
+                                PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
+                                              Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                            }
+                            .navigationBarBackButtonHidden(true)
+                            
+                        } else {
                             Button {
                                 assessmentManager.goToNextQuestion()
                             } label: {
@@ -62,23 +73,9 @@ struct SymptomPage: View {
                             }
                             .disabled(!assessmentManager.answerSelected)
                         }
+                    }
                     
                     Spacer()
-//                    HStack{
-//                        NavigationLink {
-//                            // where it should lead to
-//                        } label: {
-//                            PrimaryButton(text: "Back")
-//                        }
-//
-//                        Spacer()
-//
-//                        NavigationLink {
-//                            // where it should lead to
-//                        } label: {
-//                            PrimaryButton(text: "Next")
-//                        }
-//                    }
                 }
             }
             .padding()
@@ -86,6 +83,7 @@ struct SymptomPage: View {
             .background(Color("BackgroundColor"))
         }
     }
+
 
 struct EndView: View {
     @StateObject var assessmentManager: AssessmentManager
@@ -103,6 +101,7 @@ struct EndView: View {
             }
             .navigationBarBackButtonHidden(true)
         }
+        .onAppear(perform: assessmentManager.getScore)
         .onDisappear(perform: assessmentManager.goToNextQuestion)
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

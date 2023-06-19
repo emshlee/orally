@@ -21,7 +21,7 @@ class AssessmentManager: ObservableObject {
     @Published private(set) var question: String = ""
     
     var questions: [Question]
-    var userResponses: [Int: AttributedString] = [:]
+    var userResponses: [Int] = []
     
     init(pAssessment: Assessment) {
         self.assessment = pAssessment
@@ -29,6 +29,25 @@ class AssessmentManager: ObservableObject {
         self.length = pAssessment.questions.count
         self.currentQuestion = questions[0]
         self.answerChoices = currentQuestion.options
+    }
+    
+    func goToPrevious() {
+        // Remove previous answer
+        if index != 0 {
+//            score -= userResponses[index]
+            userResponses.removeLast()
+            
+            index -= 1
+            AssessmentAnswerRow.oneSelected = false
+            AssessmentAnswerRow.twoSelected = false
+            setQuestion()
+        }
+    }
+    
+    func getScore() {
+        for n in userResponses {
+            score += n
+        }
     }
     
     func goToNextQuestion() {
@@ -71,11 +90,15 @@ class AssessmentManager: ObservableObject {
     
     func selectAnswer(answer: AssessmentAnswer) {
         answerSelected = true
-        score += answer.score
+//        score += answer.score
+        userResponses.append(answer.score)
+//        userResponses[index] = answer.score
     }
 
     func unSelectAnswer(answer: AssessmentAnswer) {
         answerSelected = false
-        score -= answer.score
+//        score -= answer.score
+//        userResponses[index] = answer.score
+        userResponses.remove(at: index)
     }
 }
