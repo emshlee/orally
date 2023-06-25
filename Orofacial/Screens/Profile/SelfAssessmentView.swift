@@ -15,8 +15,9 @@ struct SelfAssessmentView: View {
     
     var body: some View {
             VStack(spacing: 40) {
+                
                 HStack{
-                    Text("Self-assessment")
+                    Text("Self Assessment")
                         .font(.title)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("AccentColor"))
@@ -39,15 +40,29 @@ struct SelfAssessmentView: View {
                         .environmentObject(assessmentManager)
                     
                     Spacer()
-                    if (assessmentManager.index + 1 == assessmentManager.length) {
-                        NavigationLink { SelfEndView(assessmentManager: assessmentManager) } label: {
-                            PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
+                    HStack {
+                        Button {
+                            assessmentManager.goToPrevious()
+                        } label: {
+                            PrimaryButton(text: "Back", background: assessmentManager.index != 0 ?
                                           Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
                         }
-                        .navigationBarBackButtonHidden(true)
-                    } else {
+                        .disabled(assessmentManager.index == 0)
+                        
+                        Spacer()
+                    
+                        
+                        if (assessmentManager.index + 1 == assessmentManager.length) {
+                            NavigationLink {
+                                SelfEndView(assessmentManager: assessmentManager)
+                            } label: {
+                                PrimaryButton(text: "End", background: assessmentManager.answerSelected ?
+                                              Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                            }
+                            .navigationBarBackButtonHidden(true)
+                            
+                        } else {
                             Button {
-                                
                                 assessmentManager.goToNextQuestion()
                             } label: {
                                 PrimaryButton(text: "Next", background: assessmentManager.answerSelected ?
@@ -55,12 +70,14 @@ struct SelfAssessmentView: View {
                             }
                             .disabled(!assessmentManager.answerSelected)
                         }
+                    }
+                    
                     Spacer()
                 }
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(""))
+            .background(Color("BackgroundColor"))
         }
     }
 
@@ -70,9 +87,14 @@ struct SelfEndView: View {
     
     var body: some View {
         VStack {
-            Text("The score is: \(assessmentManager.score). The result should be displayed here")
+            Text("Your Score:")
                 .padding()
             
+            Text("\(assessmentManager.score)")
+                .padding()
+            
+            Text("The interpretation should be displayed here.")
+                .padding(.bottom, 60)
             
             NavigationLink {
                 ProfileView(scores: profileView.scores + [Double(assessmentManager.score)])
@@ -82,6 +104,7 @@ struct SelfEndView: View {
             }
             .navigationBarBackButtonHidden(true)
         }
+        .onAppear(perform: assessmentManager.getScore)
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
@@ -91,12 +114,9 @@ struct SelfEndView: View {
 
 
 struct SelfView: View {
-    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment())
+    @StateObject var assessmentManager = AssessmentManager(pAssessment: SelfAssessment())
     
     var body: some View {
-//        if assessmentManager.reachedEnd {
-//            Text("\(assessmentManager.score)")
-//        } else {
             SelfAssessmentView()
             .navigationBarBackButtonHidden(true)
         }
@@ -105,6 +125,7 @@ struct SelfView: View {
 struct SelfView_Previews: PreviewProvider {
     static var previews: some View {
         SelfView()
+        SelfEndView(assessmentManager: AssessmentManager(pAssessment: SelfAssessment()))
     }
 }
 

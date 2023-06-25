@@ -4,27 +4,35 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Welcome.</string>
+		<string>Welcome to Orally.</string>
 		<key>content</key>
-		<string>This is Orally, your daily orofacial pain assessment app.</string>
+		<string>Orally is your trusted app for comprehensive oral health assessment and guidance.</string>
 		<key>sfSymbol</key>
-		<string></string>
+		<string>onboarding1</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string></string>
+		<string>Assess Your Symptoms, Instantly.</string>
 		<key>content</key>
-		<string></string>
+		<string>Have a concern about your oral health? Orally&apos;s symptom assessment feature is here to help. Simply answer a few questions about your symptoms, and our algorithm will provide you with an informal diagnosis.</string>
 		<key>sfSymbol</key>
-		<string></string>
+		<string>onboarding2</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Ready?</string>
+		<string>Never Miss a Dental Check-up.</string>
 		<key>content</key>
-		<string></string>
+		<string>Life can get busy, and dental check-ups may slip your mind. With Orally, you can set personalized reminders for your next visits to your dentist.</string>
 		<key>sfSymbol</key>
-		<string></string>
+		<string>onboarding3</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Unlock Your Best Smile, Daily with Orally!</string>
+		<key>content</key>
+		<string>Join us on a journey towards a healthier smile.</string>
+		<key>sfSymbol</key>
+		<string>onboarding4</string>
 	</dict>
 </array>
 </plist>

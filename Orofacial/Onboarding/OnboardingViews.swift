@@ -32,21 +32,24 @@ struct OnboardingViews: View {
     var body: some View {
         VStack {
             Spacer()
-            Image(systemName: item.sfSymbol ?? "")
+            GifImage(item.sfSymbol ?? "")
+                .frame(width: 200, height: 200)
+                .padding(.top, 50)
                 .padding(.bottom, 50)
                 .font(.system(size: 120, weight: .bold))
             
             Text(item.title ?? "")
-                .font(.system(size: 32, weight: .bold))
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 2)
+                .font(.system(size: 28, weight: .bold))
+                .multilineTextAlignment(.leading)
+                .padding(.bottom, 17)
                 .foregroundColor(.black)
+                .padding(.horizontal, 40)
             
             Text(item.content ?? "")
-                .font(.system(size: 12, weight: .regular))
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 2)
+                .font(.system(size: 16, weight: .regular))
+                .multilineTextAlignment(.leading)
                 .foregroundColor(.gray)
+                .padding(.horizontal, 50)
             
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
@@ -58,11 +61,10 @@ struct OnboardingViews: View {
             .foregroundColor(.white)
             .padding(.horizontal, 25)
             .padding(.vertical, 10)
-            .background(Color("ColorBlueDark"))
-            .padding(.top, 50)
+            .background(Color("AccentColor"))
+            .padding(.top, 30)
             .opacity(index == limit ? 1 : 0)
             .allowsHitTesting(index == limit)
-            .animation(.easeInOut(duration: 0.25))
         }
         .padding(.bottom, 150)
     }
@@ -70,9 +72,9 @@ struct OnboardingViews: View {
 
 struct OnboardingViews_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingViews(item: OnboardingItem(title: "Dummy",
-                                             content: "Dummy Content",
-                                             sfSymbol: "heart"),
+        OnboardingViews(item: OnboardingItem(title: "Welcome to Orally. Your virtual assessment app",
+                                             content: "Orally is your trusted app for comprehensive oral health assessment and guidance.",
+                                             sfSymbol: "onboarding1"),
                         limit: 0,
                         index: .constant(0)) { }
     }

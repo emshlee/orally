@@ -85,6 +85,11 @@
 		BEA7AB462A1BF5B7007B0FAE /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BEA7AB452A1BF5B7007B0FAE /* FirebaseStorageCombine-Community */; };
 		BEA7AB4A2A1EFD71007B0FAE /* DentalInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */; };
 		BEA7AB4C2A1EFE74007B0FAE /* DentalInfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */; };
+		BEA8020A2A482BE8006E803E /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA802092A482BE8006E803E /* GifImage.swift */; };
+		BEA8020E2A48318F006E803E /* onboarding1.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA8020D2A48318F006E803E /* onboarding1.gif */; };
+		BEA802132A483285006E803E /* onboarding4.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802122A483285006E803E /* onboarding4.gif */; };
+		BEA802152A4832B9006E803E /* onboarding3.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802142A4832B9006E803E /* onboarding3.gif */; };
+		BEA802172A4832E9006E803E /* onboarding2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802162A4832E9006E803E /* onboarding2.gif */; };
 		BED22F612A2EB5CA0069FFB0 /* SelfAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */; };
 		BED22F632A2EBA420069FFB0 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F622A2EBA420069FFB0 /* Logo.swift */; };
 		BED22F662A349C7A0069FFB0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BED22F652A349C7A0069FFB0 /* SwiftUICharts */; };
@@ -167,6 +172,11 @@
 		BEA7AB0D2A1711CA007B0FAE /* SymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomView.swift; sourceTree = "<group>"; };
 		BEA7AB492A1EFD71007B0FAE /* DentalInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoButton.swift; sourceTree = "<group>"; };
 		BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoPage.swift; sourceTree = "<group>"; };
+		BEA802092A482BE8006E803E /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		BEA8020D2A48318F006E803E /* onboarding1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding1.gif; sourceTree = "<group>"; };
+		BEA802122A483285006E803E /* onboarding4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding4.gif; sourceTree = "<group>"; };
+		BEA802142A4832B9006E803E /* onboarding3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding3.gif; sourceTree = "<group>"; };
+		BEA802162A4832E9006E803E /* onboarding2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding2.gif; sourceTree = "<group>"; };
 		BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessment.swift; sourceTree = "<group>"; };
 		BED22F622A2EBA420069FFB0 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		BEE0304129D2266100DE9929 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
@@ -430,15 +440,28 @@
 			path = Assessment;
 			sourceTree = "<group>";
 		};
+		BEA8020F2A48319B006E803E /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				BEA8020D2A48318F006E803E /* onboarding1.gif */,
+				BEA802162A4832E9006E803E /* onboarding2.gif */,
+				BEA802142A4832B9006E803E /* onboarding3.gif */,
+				BEA802122A483285006E803E /* onboarding4.gif */,
+			);
+			path = gif;
+			sourceTree = "<group>";
+		};
 		BEE0304029D2263000DE9929 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				BEA8020F2A48319B006E803E /* gif */,
 				BEE0304129D2266100DE9929 /* OnboardingItem.swift */,
 				BEE0304529D2293100DE9929 /* OnboardingScreenView.swift */,
 				BEE0304B29D22B3000DE9929 /* OnboardingViews.swift */,
 				BEE0304D29D22CB800DE9929 /* OnboardingContent.plist */,
 				BEE0304F29D22D7900DE9929 /* PlistManager.swift */,
 				BEE0305529D233E200DE9929 /* OnboardingContentManager.swift */,
+				BEA802092A482BE8006E803E /* GifImage.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -584,10 +607,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA802172A4832E9006E803E /* onboarding2.gif in Resources */,
+				BEA802132A483285006E803E /* onboarding4.gif in Resources */,
+				BEA802152A4832B9006E803E /* onboarding3.gif in Resources */,
 				BE02B59229B0189400CA5C84 /* Preview Assets.xcassets in Resources */,
 				3A67BD4729D61B2B00296FCE /* GoogleService-Info.plist in Resources */,
 				BEE0304E29D22CB800DE9929 /* OnboardingContent.plist in Resources */,
 				BE02B58F29B0189400CA5C84 /* Assets.xcassets in Resources */,
+				BEA8020E2A48318F006E803E /* onboarding1.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +650,7 @@
 				BEA7AB082A12C369007B0FAE /* LoginManager.swift in Sources */,
 				BE40818829C972F00058C97B /* LoginView.swift in Sources */,
 				676F32752A25550C00485E0F /* DentalInfo.swift in Sources */,
+				BEA8020A2A482BE8006E803E /* GifImage.swift in Sources */,
 				BEE0304C29D22B3000DE9929 /* OnboardingViews.swift in Sources */,
 				BEA7AAF52A11D607007B0FAE /* AssessmentAnswer.swift in Sources */,
 				BEA7AAC22A09B035007B0FAE /* SettingsView.swift in Sources */,

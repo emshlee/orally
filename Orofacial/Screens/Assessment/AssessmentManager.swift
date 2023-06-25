@@ -80,14 +80,6 @@ class AssessmentManager: ObservableObject {
         }
     }
     
-    func selected() {
-        answerSelected = true
-    }
-    
-    func unSelected() {
-        answerSelected = false
-    }
-    
     func selectAnswer(answer: AssessmentAnswer) {
         answerSelected = true
 //        score += answer.score
