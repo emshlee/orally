@@ -17,6 +17,15 @@ struct HomeView: View {
                 ScrollView (.vertical) {
                     VStack{
                         VStack{
+                            NavigationLink(destination: AboutUsPage()) {
+                                Image("QuestionMark")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 25)
+                                    .position(x: UIScreen.main.bounds.width - 60, y: 15)
+                                    .edgesIgnoringSafeArea(.all)
+                            }
+                            
                             Image("AppLogo")
                                 .resizable()
                                 .scaledToFit()
@@ -84,6 +93,23 @@ struct FAQView: View {
                     }
                 }
             }
+        }
+        .padding()
+        .padding(.top)
+        .padding(.bottom, 50)
+        .background(Color("BackgroundColor"))
+        .cornerRadius(60.0)
+    }
+}
+struct AboutUsView: View {
+    var body: some View {
+        VStack(alignment: .center) {
+            Image("QuestionMark")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30)
+                .padding(.top, 20)
+            
         }
         .padding()
         .padding(.top)

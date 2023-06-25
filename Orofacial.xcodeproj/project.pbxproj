@@ -11,6 +11,7 @@
 		3A1DB18E2A1F079E0091414B /* EncyclopediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1DB18D2A1F079E0091414B /* EncyclopediaButton.swift */; };
 		3A1DB1902A1F08CE0091414B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1DB18F2A1F08CE0091414B /* SearchBar.swift */; };
 		3A67BD4729D61B2B00296FCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A67BD4629D61B2B00296FCE /* GoogleService-Info.plist */; };
+		3AF34EEB2A47BBB300C89502 /* AboutUsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF34EEA2A47BBB200C89502 /* AboutUsPage.swift */; };
 		4AD7372829D534A500A54A26 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD7372729D534A500A54A26 /* UserInfoView.swift */; };
 		676F32752A25550C00485E0F /* DentalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F32742A25550C00485E0F /* DentalInfo.swift */; };
 		677907F92A2EAA2600B3D1FE /* DentalInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677907F82A2EAA2600B3D1FE /* DentalInfoModel.swift */; };
@@ -123,6 +124,7 @@
 		3A1DB18D2A1F079E0091414B /* EncyclopediaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncyclopediaButton.swift; sourceTree = "<group>"; };
 		3A1DB18F2A1F08CE0091414B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		3A67BD4629D61B2B00296FCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AF34EEA2A47BBB200C89502 /* AboutUsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsPage.swift; sourceTree = "<group>"; };
 		4AD7372729D534A500A54A26 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		676F32742A25550C00485E0F /* DentalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DentalInfo.swift; path = "Orofacial/Screens/Dental info/Component/DentalInfo.swift"; sourceTree = SOURCE_ROOT; };
 		677907F82A2EAA2600B3D1FE /* DentalInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoModel.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 				BEA7AAD72A0AC524007B0FAE /* HomeView.swift */,
 				BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */,
 				AE553CEC2A279FD00072CE58 /* TeethView.swift */,
+				3AF34EEA2A47BBB200C89502 /* AboutUsPage.swift */,
 			);
 			path = "Dental info";
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 				BEA7AAF72A11DAE0007B0FAE /* AssessmentAnswerRow.swift in Sources */,
 				BEA7AAB92A09A219007B0FAE /* AuthenticationManager.swift in Sources */,
 				BEA7AAF12A11CFAD007B0FAE /* Assessment.swift in Sources */,
+				3AF34EEB2A47BBB300C89502 /* AboutUsPage.swift in Sources */,
 				BEA7AAE02A0AD60F007B0FAE /* FAQ.swift in Sources */,
 				BEA7AB0C2A17087B007B0FAE /* SymptomAssessment.swift in Sources */,
 				4AD7372829D534A500A54A26 /* UserInfoView.swift in Sources */,
