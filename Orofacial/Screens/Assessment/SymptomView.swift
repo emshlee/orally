@@ -41,6 +41,7 @@ struct SymptomPage: View {
                     
                     AssessmentAnswerRow(answer: assessmentManager.answerChoices)
                         .environmentObject(assessmentManager)
+                        .onAppear(perform: assessmentManager.resetButtons)
                     
                     Spacer()
                     HStack {

@@ -52,8 +52,7 @@ class AssessmentManager: ObservableObject {
     
     func goToNextQuestion() {
         
-        AssessmentAnswerRow.oneSelected = false
-        AssessmentAnswerRow.twoSelected = false
+        resetButtons()
         
         if index + 1 == length {
             endAssessment()
@@ -62,6 +61,11 @@ class AssessmentManager: ObservableObject {
             // Setting new question
             setQuestion()
         }
+    }
+    
+    func resetButtons() {
+        AssessmentAnswerRow.oneSelected = false
+        AssessmentAnswerRow.twoSelected = false
     }
     
     func endAssessment() {
