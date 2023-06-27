@@ -14,7 +14,8 @@ struct DentalInfoView: View {
         ScrollView {
             AsyncImage(url: URL(string: info.image)) { image in image
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    //.aspectRatio(contentMode: .fill)
+                
             } placeholder: {
                 Image(systemName: "photo")
                     .resizable()
@@ -31,7 +32,21 @@ struct DentalInfoView: View {
                     .font(.largeTitle)
                     .bold()
                     .multilineTextAlignment(.center)
+                
+                VStack(alignment: .leading, spacing: 30) {
+                    if !info.description.isEmpty {
+                        Text(info.description)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
             }
+            
+            .padding(.horizontal)
+            
+            // Why is padding not working!!!
+            // Because of ".aspectRation(contentMode:.fill)"
+            
         }
         .ignoresSafeArea(.container, edges: .top)
     }
