@@ -377,6 +377,7 @@
 				677907FC2A2EB46400B3D1FE /* Models */,
 				BEA7AAE12A0ADF58007B0FAE /* Component */,
 				BEA7AAD72A0AC524007B0FAE /* HomeView.swift */,
+				677907FD2A2EB48A00B3D1FE /* DentalInfoList.swift */,
 				BEA7AB4B2A1EFE74007B0FAE /* DentalInfoPage.swift */,
 				AE553CEC2A279FD00072CE58 /* TeethView.swift */,
 				3AF34EEA2A47BBB200C89502 /* AboutUsPage.swift */,
@@ -388,7 +389,6 @@
 			isa = PBXGroup;
 			children = (
 				676F32742A25550C00485E0F /* DentalInfo.swift */,
-				677907FD2A2EB48A00B3D1FE /* DentalInfoList.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
