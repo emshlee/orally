@@ -10,13 +10,21 @@ import SwiftUI
 struct DentalInfoList: View {
     var infos: [Info]
     var body: some View {
-        VStack {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
-                ForEach(infos) { info in DentalInfo(info: info)}
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                LazyHGrid(rows: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
+                    ForEach(infos) { info in DentalInfo(info: info)}
+                    
+                    /*
+                    NavigationLink(destination: DentalInfoView(info: infos){
+                        DentalInfo(info: infos)
+                    */
+                }
+                .padding(.top)
+                .padding(.bottom, 35)
             }
-            .padding(.top)
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
 }
 
