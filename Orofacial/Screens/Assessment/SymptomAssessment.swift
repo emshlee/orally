@@ -7,12 +7,6 @@
 
 import Foundation
 
-struct Question {
-    var id: Int
-    var text: String
-    var options: [AssessmentAnswer]
-}
-
 class SymptomAssessment : Assessment {
     
     init() {

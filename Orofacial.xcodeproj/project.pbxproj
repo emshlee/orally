@@ -91,6 +91,7 @@
 		BEA802132A483285006E803E /* onboarding4.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802122A483285006E803E /* onboarding4.gif */; };
 		BEA802152A4832B9006E803E /* onboarding3.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802142A4832B9006E803E /* onboarding3.gif */; };
 		BEA802172A4832E9006E803E /* onboarding2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802162A4832E9006E803E /* onboarding2.gif */; };
+		BEA802192A4D3ED7006E803E /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA802182A4D3ED7006E803E /* TreeNode.swift */; };
 		BED22F612A2EB5CA0069FFB0 /* SelfAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */; };
 		BED22F632A2EBA420069FFB0 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F622A2EBA420069FFB0 /* Logo.swift */; };
 		BED22F662A349C7A0069FFB0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BED22F652A349C7A0069FFB0 /* SwiftUICharts */; };
@@ -179,6 +180,7 @@
 		BEA802122A483285006E803E /* onboarding4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding4.gif; sourceTree = "<group>"; };
 		BEA802142A4832B9006E803E /* onboarding3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding3.gif; sourceTree = "<group>"; };
 		BEA802162A4832E9006E803E /* onboarding2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding2.gif; sourceTree = "<group>"; };
+		BEA802182A4D3ED7006E803E /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
 		BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessment.swift; sourceTree = "<group>"; };
 		BED22F622A2EBA420069FFB0 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		BEE0304129D2266100DE9929 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				BEA7AAF22A11D154007B0FAE /* AssessmentManager.swift */,
 				BEA7AAF62A11DAE0007B0FAE /* AssessmentAnswerRow.swift */,
 				BEA7AB0D2A1711CA007B0FAE /* SymptomView.swift */,
+				BEA802182A4D3ED7006E803E /* TreeNode.swift */,
 			);
 			path = Assessment;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				3A1DB18E2A1F079E0091414B /* EncyclopediaButton.swift in Sources */,
 				BEE0304229D2266100DE9929 /* OnboardingItem.swift in Sources */,
 				BE02B58D29B0189300CA5C84 /* ContentView.swift in Sources */,
+				BEA802192A4D3ED7006E803E /* TreeNode.swift in Sources */,
 				3A1DB1902A1F08CE0091414B /* SearchBar.swift in Sources */,
 				BE02B58B29B0189300CA5C84 /* OrofacialApp.swift in Sources */,
 				BEA7AAFD2A12ADC1007B0FAE /* LoginButton.swift in Sources */,

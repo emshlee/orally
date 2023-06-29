@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct Question {
+    var id: Int
+    var text: String
+    var options: [AssessmentAnswer]
+}
+
 class Assessment {
     var questions: [Question]
     var userResponses: [Int: String]

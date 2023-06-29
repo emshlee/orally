@@ -45,11 +45,15 @@ struct HomeView: View {
                             }
                             .padding()
                             
-                            NavigationLink {
-                                // where it should lead to
-                                DentalInfoPage()
-                            } label: {
-                                DentalInfoButton()
+//                            NavigationLink {
+//                                // where it should lead to
+//                                DentalInfoPage()
+//                            } label: {
+//                                DentalInfoButton()
+//                            }
+                            
+                            ScrollView {
+                                DentalInfoList(infos: Info.all)
                             }
                             
                     
