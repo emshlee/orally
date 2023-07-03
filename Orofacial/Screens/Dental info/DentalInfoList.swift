@@ -15,10 +15,6 @@ struct DentalInfoList: View {
                 LazyHGrid(rows: [GridItem(.adaptive(minimum: 160), spacing: 15)], spacing: 15) {
                     ForEach(infos) { info in DentalInfo(info: info)}
                     
-                    /*
-                    NavigationLink(destination: DentalInfoView(info: infos){
-                        DentalInfo(info: infos)
-                    */
                 }
                 .padding(.top)
                 .padding(.bottom, 35)
