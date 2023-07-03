@@ -52,8 +52,8 @@ struct ProfileView: View {
                             }
                             
                             NavigationLink {
-                                SelfAssessmentView()
-                                    .navigationBarHidden(true)
+//                                SelfAssessmentView()
+//                                    .navigationBarHidden(true)
                             } label: {
                                 PrimaryButton(text: "Start self assessment")
                             }

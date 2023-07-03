@@ -14,12 +14,11 @@ struct Question {
 }
 
 class Assessment {
-    var questions: [Question]
-    var userResponses: [Int: String]
-    var scores: [Double] = []
+    var tree: TreeNode<String>
+    var userResponses: [Int]
     
-    init(questions: [Question], userResponses: [Int : String]) {
-        self.questions = questions
+    init(tree: TreeNode<String>, userResponses: [Int]) {
+        self.tree = tree
         self.userResponses = userResponses
     }
 }

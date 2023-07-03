@@ -9,8 +9,7 @@ import SwiftUI
 
 struct SymptomPage: View {
     
-    @StateObject var assessmentManager = AssessmentManager(pAssessment: SymptomAssessment())
-    
+    @StateObject var assessmentManager : AssessmentManager
         
     @State private var currentQuestionIndex = 0
 //    @State private var progress = currentQuestionIndex / symptomAssessment.questions.count * 100
@@ -27,13 +26,18 @@ struct SymptomPage: View {
                     
                     Spacer()
                     
-                    Text("\(assessmentManager.index + 1) out of \(assessmentManager.length)")
+                    Text("\(assessmentManager.questionIndex + 1) out of \(assessmentManager.length)")
                         .foregroundColor(Color("AccentColor"))
                 }
+                
                 ProgressBar(progress: assessmentManager.progress)
                 
+                if assessmentManager.currentNode.name != "" {
+                    Text(assessmentManager.currentNode.name)
+                }
+                
                 VStack(alignment: .center, spacing: 20) {
-                    Text(assessmentManager.currentQuestion.text)
+                    Text(assessmentManager.currentNode.value[assessmentManager.questionIndex])
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(.gray)
@@ -48,15 +52,15 @@ struct SymptomPage: View {
                         Button {
                             assessmentManager.goToPrevious()
                         } label: {
-                            PrimaryButton(text: "Back", background: assessmentManager.index != 0 ?
+                            PrimaryButton(text: "Back", background: assessmentManager.questionIndex != 0 ?
                                           Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
                         }
-                        .disabled(assessmentManager.index == 0)
+                        .disabled(assessmentManager.questionIndex == 0)
                         
                         Spacer()
                     
                         
-                        if (assessmentManager.index + 1 == assessmentManager.length) {
+                        if (assessmentManager.questionIndex + 1 == assessmentManager.length) {
                             NavigationLink {
                                 EndView(assessmentManager: assessmentManager)
                             } label: {
@@ -82,6 +86,7 @@ struct SymptomPage: View {
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color("BackgroundColor"))
+            .onAppear(perform: assessmentManager.resetButtons)
         }
     }
 
@@ -91,19 +96,91 @@ struct EndView: View {
     
     var body: some View {
         VStack {
-            Text("The score is: \(assessmentManager.score). The medical condition associated with this score should be displayed here")
+            Text("Your Result")
+                .font(.title)
+                .fontWeight(.heavy)
+                .foregroundColor(Color("AccentColor"))
                 .padding()
+            
+            if assessmentManager.currentNode.levelNumber == 2 {
+                // Disease group should be displayed
+                VStack {
+                    Text("You are half-way through the symptom assessment! Based on the answers you've provided, it seems that your oral condition belongs to:")
+                        .font(.system(size: 18))
+                        .bold()
+                        .foregroundColor(.gray)
+                        .padding(.top)
+                        .padding(.horizontal)
+                    
+                    ZStack {
+                        Color(.white)
+                        // HARD CODED FOR NOW
+                        VStack {
+//                            Text("Group 2: Systemic Conditions")
+                            Text(assessmentManager.currentNode.name)
+                                .font(.title3)
+                                .bold()
+                                .foregroundColor(.black)
+                                .padding(.bottom)
+                            
+                            Text("Examples of conditions belonging to this group are\n")
+                                .padding(.horizontal)
+                            
+//                            Text("Folate Deficiency, Anemia")
+                          Text(assessmentManager.currentNode.examples)
+                                .background(Color("BackgroundColor"))
+                                .bold()
+                        }
+                    }
+                    .frame(maxHeight: 200)
+                    .padding()
+                    
+                    Text("Would you like to continue the symptom assessment?")
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(Color("AccentColor"))
+                        .padding()
+                        .frame(alignment: .center)
+                    
+                    NavigationLink {
+                        SymptomPage(assessmentManager: assessmentManager)
+                            .navigationBarBackButtonHidden(true)
+                    } label: {
+                        PrimaryButton(text: "Continue assessment")
+                    }
+                    .navigationBarBackButtonHidden(true)
+                }
+            } else if (assessmentManager.currentNode.levelNumber == 3) {
+                VStack {
+                    Text("You've reached the end of the assessment")
+                        .font(.system(size: 18))
+                        .bold()
+                        .foregroundColor(.gray)
+                        .padding(.top)
+                        .padding(.bottom)
+                    
+//                    Text("Oral Cancer")
+                    Text(assessmentManager.currentNode.value[assessmentManager.questionIndex])
+                        .font(.title)
+                        .bold()
+                        .padding()
+                        .padding(.bottom)
+                    
+                    // Encyclopedia button ??
+                }
+            }
             
             NavigationLink {
                 HomeView()
                     .navigationBarBackButtonHidden(true)
             } label: {
-                PrimaryButton(text: "Exit")
+                PrimaryButton(text: "End assessment")
             }
             .navigationBarBackButtonHidden(true)
+            .onTapGesture(perform: assessmentManager.resetAssessment)
         }
         .onAppear(perform: assessmentManager.getScore)
-        .onDisappear(perform: assessmentManager.goToNextQuestion)
+        .onAppear(perform: assessmentManager.getResult)
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
@@ -119,7 +196,7 @@ struct SymptomView: View {
 //        if assessmentManager.reachedEnd {
 //            Text("\(assessmentManager.score)")
 //        } else {
-            SymptomPage()
+            SymptomPage(assessmentManager: AssessmentManager(pAssessment: SymptomAssessment()))
             .navigationBarBackButtonHidden(true)
         }
     }
@@ -127,5 +204,6 @@ struct SymptomView: View {
 struct SymptomView_Previews: PreviewProvider {
     static var previews: some View {
         SymptomView()
+        EndView(assessmentManager: AssessmentManager(pAssessment: SymptomAssessment()))
     }
 }

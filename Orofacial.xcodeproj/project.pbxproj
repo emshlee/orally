@@ -401,9 +401,7 @@
 				4AD7372729D534A500A54A26 /* UserInfoView.swift */,
 				BEA7AABC2A09AF7B007B0FAE /* ProfileView.swift */,
 				BEA7AAF82A11EB30007B0FAE /* ProfileSetUpView.swift */,
-				BEA7AAE92A0C92CF007B0FAE /* SelfAssessmentView.swift */,
 				BEA7AAFA2A11EC02007B0FAE /* UserInfo.swift */,
-				BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -442,6 +440,8 @@
 				BEA7AAF62A11DAE0007B0FAE /* AssessmentAnswerRow.swift */,
 				BEA7AB0D2A1711CA007B0FAE /* SymptomView.swift */,
 				BEA802182A4D3ED7006E803E /* TreeNode.swift */,
+				BEA7AAE92A0C92CF007B0FAE /* SelfAssessmentView.swift */,
+				BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */,
 			);
 			path = Assessment;
 			sourceTree = "<group>";

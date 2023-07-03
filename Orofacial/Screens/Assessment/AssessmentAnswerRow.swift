@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AssessmentAnswerRow: View {
     @EnvironmentObject var assessmentManager: AssessmentManager
+    @State private var oneShadowColor: Color = .gray
+    @State private var twoShadowColor: Color = .gray
     
     var answer: [AssessmentAnswer] = [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]
     static var oneSelected: Bool = false
@@ -22,19 +24,12 @@ struct AssessmentAnswerRow: View {
                 
                 Text(answer[0].text)
                     .bold()
-                
-                if AssessmentAnswerRow.oneSelected {
-                    Spacer()
-                    
-                }
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
             .foregroundColor(Color("AccentColor"))
             .background(.white)
             .cornerRadius(10)
-            .shadow(color: AssessmentAnswerRow.oneSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
-        
             .onTapGesture {
                 // Second option was already selected
                 if (AssessmentAnswerRow.twoSelected == true) {
@@ -46,10 +41,13 @@ struct AssessmentAnswerRow: View {
                 
                 if AssessmentAnswerRow.oneSelected {
                     assessmentManager.selectAnswer(answer: answer[0])
+//                    oneShadowColor = Color("AccentColor")
                 } else {
                     assessmentManager.unSelectAnswer(answer: answer[0])
+//                    oneShadowColor = .gray
                 }
             }
+            .shadow(color: AssessmentAnswerRow.oneSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
             
             
             
@@ -70,7 +68,6 @@ struct AssessmentAnswerRow: View {
             .foregroundColor(Color("AccentColor"))
             .background(.white)
             .cornerRadius(10)
-            .shadow(color: AssessmentAnswerRow.twoSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
             .onTapGesture {
                 if (AssessmentAnswerRow.oneSelected == true) {
                     AssessmentAnswerRow.oneSelected.toggle()
@@ -81,17 +78,21 @@ struct AssessmentAnswerRow: View {
                 
                 if AssessmentAnswerRow.twoSelected {
                     assessmentManager.selectAnswer(answer: answer[1])
+//                    twoShadowColor = Color("AccentColor")
                 } else {
                     assessmentManager.unSelectAnswer(answer: answer[1])
+//                    twoShadowColor = .gray
                 }
+                
             }
+            .shadow(color: AssessmentAnswerRow.twoSelected ? Color("AccentColor") : .gray, radius: 5, x: 0.5, y: 0.5)
         }
     }
 }
     
     struct AssessmentAnswerRow_Previews: PreviewProvider {
         static var previews: some View {
-            AssessmentAnswerRow(answer: [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)])
+            AssessmentAnswerRow()
                 .environmentObject(AssessmentManager(pAssessment: SymptomAssessment()))
         }
     }
