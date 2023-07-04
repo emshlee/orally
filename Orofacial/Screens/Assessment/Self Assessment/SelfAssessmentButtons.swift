@@ -1,14 +1,16 @@
 //
-//  AssessmentAnswerRow.swift
+//  SelfAssessmentButtons.swift
 //  Orofacial
 //
-//  Created by Emma Sihyun Lee on 2023-05-14.
+//  Created by Emma Sihyun Lee on 2023-07-04.
 //
+
+import Foundation
 
 import SwiftUI
 
-struct AssessmentAnswerRow: View {
-    @EnvironmentObject var assessmentManager: AssessmentManager
+struct SelfAssessmentButtons: View {
+    @EnvironmentObject var assessmentManager: SelfAssessmentManager
     
     var answer: [AssessmentAnswer] = [AssessmentAnswer(text: "Yes", score: 1), AssessmentAnswer(text: "No", score: 0)]
     static var oneSelected: Bool = false
@@ -17,7 +19,7 @@ struct AssessmentAnswerRow: View {
     var body: some View {
         VStack {
             HStack(spacing: 20) {
-                Image(systemName: "circle.fill")
+                Image(systemName: "square.fill")
                     .font(.caption)
                 
                 Text(answer[0].text)
@@ -50,7 +52,7 @@ struct AssessmentAnswerRow: View {
             
             
             HStack(spacing: 20) {
-                Image(systemName: "circle.fill")
+                Image(systemName: "square.fill")
                     .font(.caption)
                 
                 Text(answer[1].text)
@@ -88,10 +90,9 @@ struct AssessmentAnswerRow: View {
     }
 }
     
-    struct AssessmentAnswerRow_Previews: PreviewProvider {
+    struct SelfAssessmentButtons_Previews: PreviewProvider {
         static var previews: some View {
             AssessmentAnswerRow()
                 .environmentObject(AssessmentManager(pAssessment: SymptomAssessment()))
         }
     }
-

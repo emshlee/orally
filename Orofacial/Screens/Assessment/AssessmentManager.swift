@@ -29,7 +29,7 @@ class AssessmentManager: ObservableObject {
     
     init(pAssessment: Assessment) {
         self.assessment = pAssessment
-        self.length = pAssessment.tree.children[QSetIndex].value.count // number of questions in the current set
+        self.length = assessment.tree.children[QSetIndex].value.count // number of questions in the current set
         self.currentQuestion = assessment.tree.children[QSetIndex].value[questionIndex]
         self.currentNode = assessment.tree.children[QSetIndex]
     }

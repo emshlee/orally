@@ -92,6 +92,8 @@
 		BEA802152A4832B9006E803E /* onboarding3.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802142A4832B9006E803E /* onboarding3.gif */; };
 		BEA802172A4832E9006E803E /* onboarding2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BEA802162A4832E9006E803E /* onboarding2.gif */; };
 		BEA802192A4D3ED7006E803E /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA802182A4D3ED7006E803E /* TreeNode.swift */; };
+		BEA8021B2A53B95C006E803E /* SelfAssessmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA8021A2A53B95C006E803E /* SelfAssessmentManager.swift */; };
+		BEA8021D2A53CE06006E803E /* SelfAssessmentButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA8021C2A53CE06006E803E /* SelfAssessmentButtons.swift */; };
 		BED22F612A2EB5CA0069FFB0 /* SelfAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */; };
 		BED22F632A2EBA420069FFB0 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED22F622A2EBA420069FFB0 /* Logo.swift */; };
 		BED22F662A349C7A0069FFB0 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = BED22F652A349C7A0069FFB0 /* SwiftUICharts */; };
@@ -181,6 +183,8 @@
 		BEA802142A4832B9006E803E /* onboarding3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding3.gif; sourceTree = "<group>"; };
 		BEA802162A4832E9006E803E /* onboarding2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = onboarding2.gif; sourceTree = "<group>"; };
 		BEA802182A4D3ED7006E803E /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
+		BEA8021A2A53B95C006E803E /* SelfAssessmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessmentManager.swift; sourceTree = "<group>"; };
+		BEA8021C2A53CE06006E803E /* SelfAssessmentButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessmentButtons.swift; sourceTree = "<group>"; };
 		BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfAssessment.swift; sourceTree = "<group>"; };
 		BED22F622A2EBA420069FFB0 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		BEE0304129D2266100DE9929 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
@@ -433,6 +437,7 @@
 		BEA7AB0F2A1711D3007B0FAE /* Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				BEA8021E2A53CF23006E803E /* Self Assessment */,
 				BEA7AAF02A11CFAD007B0FAE /* Assessment.swift */,
 				BEA7AAF42A11D607007B0FAE /* AssessmentAnswer.swift */,
 				BEA7AB0B2A17087B007B0FAE /* SymptomAssessment.swift */,
@@ -440,8 +445,6 @@
 				BEA7AAF62A11DAE0007B0FAE /* AssessmentAnswerRow.swift */,
 				BEA7AB0D2A1711CA007B0FAE /* SymptomView.swift */,
 				BEA802182A4D3ED7006E803E /* TreeNode.swift */,
-				BEA7AAE92A0C92CF007B0FAE /* SelfAssessmentView.swift */,
-				BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */,
 			);
 			path = Assessment;
 			sourceTree = "<group>";
@@ -455,6 +458,17 @@
 				BEA802122A483285006E803E /* onboarding4.gif */,
 			);
 			path = gif;
+			sourceTree = "<group>";
+		};
+		BEA8021E2A53CF23006E803E /* Self Assessment */ = {
+			isa = PBXGroup;
+			children = (
+				BEA7AAE92A0C92CF007B0FAE /* SelfAssessmentView.swift */,
+				BED22F602A2EB5CA0069FFB0 /* SelfAssessment.swift */,
+				BEA8021A2A53B95C006E803E /* SelfAssessmentManager.swift */,
+				BEA8021C2A53CE06006E803E /* SelfAssessmentButtons.swift */,
+			);
+			path = "Self Assessment";
 			sourceTree = "<group>";
 		};
 		BEE0304029D2263000DE9929 /* Onboarding */ = {
@@ -662,6 +676,7 @@
 				BEA7AAC22A09B035007B0FAE /* SettingsView.swift in Sources */,
 				BEA7AAF72A11DAE0007B0FAE /* AssessmentAnswerRow.swift in Sources */,
 				BEA7AAB92A09A219007B0FAE /* AuthenticationManager.swift in Sources */,
+				BEA8021B2A53B95C006E803E /* SelfAssessmentManager.swift in Sources */,
 				BEA7AAF12A11CFAD007B0FAE /* Assessment.swift in Sources */,
 				3AF34EEB2A47BBB300C89502 /* AboutUsPage.swift in Sources */,
 				BEA7AAE02A0AD60F007B0FAE /* FAQ.swift in Sources */,
@@ -674,6 +689,7 @@
 				BEE0304629D2293100DE9929 /* OnboardingScreenView.swift in Sources */,
 				BE40818629C970400058C97B /* CircleGroupView.swift in Sources */,
 				3A1DB18C2A1F038F0091414B /* Encyclopedia.swift in Sources */,
+				BEA8021D2A53CE06006E803E /* SelfAssessmentButtons.swift in Sources */,
 				BEA7AAF92A11EB30007B0FAE /* ProfileSetUpView.swift in Sources */,
 				BEA7AAEF2A11C88A007B0FAE /* ProgressBar.swift in Sources */,
 				BEA7AB4C2A1EFE74007B0FAE /* DentalInfoPage.swift in Sources */,
