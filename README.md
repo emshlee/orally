@@ -24,7 +24,7 @@ Design tools used:
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
