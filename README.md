@@ -1,5 +1,7 @@
 # Orally
 
+[![AKCSE Instagram][Instagram]][Instagram-url]
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -21,6 +23,8 @@ Design tools used:
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 <!-- https://ileriayo.github.io/markdown-badges/ -->
+[Instagram]: https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white
+[Instagram-url]: https://instagram.com/akcse_mcgill?igshid=MzRlODBiNWFlZA==
 [SwiftUI]: https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white
 [Swift-url]: https://developer.apple.com/swift/
 [Figma.com]: https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white
