@@ -22,6 +22,11 @@ Design tools used:
 * [![Figma][Figma.com]][Figma-url]
 * [![Canva][Canva.com]][Canva-url]
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
