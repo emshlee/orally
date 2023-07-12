@@ -10,5 +10,5 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[SwiftUI]: https://developer.apple.com/swift/images/swift-og.png
-[Bootstrap-url]: https://developer.apple.com/swift/
+[SwiftUI]: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Swift_logo.svg/1024px-Swift_logo.svg.png
+[Swift-url]: https://developer.apple.com/swift/
