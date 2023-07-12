@@ -87,6 +87,13 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Apple Developer Documentation](https://developer.apple.com/documentation/swift)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
