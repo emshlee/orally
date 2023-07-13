@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelfAssessmentView: View {
 
-    @StateObject var assessmentManager = SelfAssessmentManager(pAssessment: SelfAssessment())
+    @StateObject var assessmentManager : SelfAssessmentManager
 
     @State private var currentQuestionIndex = 0
 
@@ -89,10 +89,10 @@ struct SelfEndView: View {
 
     var body: some View {
         VStack {
-            Text("Your Score:")
+            Text("Your Result:")
                 .padding()
 
-            Text("\(assessmentManager.score)")
+            Text("\(assessmentManager.result)")
                 .padding()
 
             Text("The interpretation should be displayed here.")
@@ -107,6 +107,7 @@ struct SelfEndView: View {
             .navigationBarBackButtonHidden(true)
         }
         .onAppear(perform: assessmentManager.getScore)
+        .onAppear(perform: assessmentManager.getResult)
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
@@ -119,7 +120,7 @@ struct SelfView: View {
     @StateObject var assessmentManager = SelfAssessmentManager(pAssessment: SelfAssessment())
 
     var body: some View {
-            SelfAssessmentView()
+        SelfAssessmentView(assessmentManager : assessmentManager)
             .navigationBarBackButtonHidden(true)
         }
     }

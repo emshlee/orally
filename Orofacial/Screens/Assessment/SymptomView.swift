@@ -188,7 +188,7 @@ struct SymptomView: View {
 //        if assessmentManager.reachedEnd {
 //            Text("\(assessmentManager.score)")
 //        } else {
-            SymptomPage(assessmentManager: AssessmentManager(pAssessment: SymptomAssessment()))
+            SymptomPage(assessmentManager: assessmentManager)
             .navigationBarBackButtonHidden(true)
         }
     }

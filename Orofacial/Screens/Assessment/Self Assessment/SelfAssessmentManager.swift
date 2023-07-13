@@ -16,6 +16,7 @@ class SelfAssessmentManager: ObservableObject {
     @Published private(set) var progress: CGFloat = 0.00
     @Published private(set) var currentQuestion: String
     @Published private(set) var score: Int = 0
+    @Published private(set) var result: String = "Default value"
     var userResponses : [Int] = []
     var questionIndex : Int = 0 // index of current question
     
@@ -38,7 +39,8 @@ class SelfAssessmentManager: ObservableObject {
     }
     
     func getScore() {
-        score = userResponses.reduce(0, {x, y in x + y})
+        // TO BE CHANGED
+        score = 0
     }
     
     func getProgress() {
@@ -72,6 +74,14 @@ class SelfAssessmentManager: ObservableObject {
         // Reset score
         score = 0
         
+    }
+    
+    func getResult() {
+        if score > 8 {
+            result = "Good"
+        } else if score > 5 {
+            
+        }
     }
     
     func setQuestion() {
