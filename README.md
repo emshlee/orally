@@ -40,6 +40,10 @@ The "Assessment of Orofacial Pain and Symptoms" app is designed to address the o
 
 * [![Swift][SwiftUI]][Swift-url]
 
+IDE (Integrated Development Environment) used:
+
+* [![Xcode][Xcode.com]][Xcode-url]
+
 Design tools used:
 
 * [![Figma][Figma.com]][Figma-url]
@@ -51,6 +55,11 @@ Design tools used:
 ### Prerequisites
 
 No additional downloads are required apart from Xcode. By utilizing Xcode, you will be able to observe the workflow of the mobile application.
+
+Xcode is Apple's integrated development environment for macOS, used to develop software for macOS, iOS, iPadOS, watchOS, tvOS, and visionOS.
+
+Learn more about Xcode here:
+[![Xcode][Xcode.com]][Xcode-url]
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -84,6 +93,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [Instagram-url]: https://instagram.com/akcse_mcgill?igshid=MzRlODBiNWFlZA==
 [SwiftUI]: https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white
 [Swift-url]: https://developer.apple.com/swift/
+[Xcode.com]: https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white
+[Xcode-url]: https://developer.apple.com/xcode/
 [Figma.com]: https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white
 [Figma-url]: https://www.figma.com/
 [Canva.com]: https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white
