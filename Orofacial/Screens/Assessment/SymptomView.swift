@@ -10,10 +10,6 @@ import SwiftUI
 struct SymptomPage: View {
     
     @StateObject var assessmentManager : AssessmentManager
-        
-    @State private var currentQuestionIndex = 0
-//    @State private var progress = currentQuestionIndex / symptomAssessment.questions.count * 100
-//    @State private var userResponses: [Int: String] = [:]
     
     var body: some View {
             VStack(spacing: 40) {
@@ -114,19 +110,16 @@ struct EndView: View {
                     
                     ZStack {
                         Color(.white)
-                        // HARD CODED FOR NOW
                         VStack {
-//                            Text("Group 2: Systemic Conditions")
                             Text(assessmentManager.currentNode.name)
                                 .font(.title3)
                                 .bold()
                                 .foregroundColor(.black)
                                 .padding(.bottom)
                             
-                            Text("Examples of conditions belonging to this group are\n")
+                            Text("Example(s) of conditions belonging to this group:\n")
                                 .padding(.horizontal)
                             
-//                            Text("Folate Deficiency, Anemia")
                           Text(assessmentManager.currentNode.examples)
                                 .background(Color("BackgroundColor"))
                                 .bold()
@@ -159,7 +152,6 @@ struct EndView: View {
                         .padding(.top)
                         .padding(.bottom)
                     
-//                    Text("Oral Cancer")
                     Text(assessmentManager.currentNode.value[assessmentManager.questionIndex])
                         .font(.title)
                         .bold()

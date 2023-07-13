@@ -12,8 +12,10 @@ public class TreeNode<T> {
     public var examples : String
     public var value: [T]
     public var children: [TreeNode] = []
+    public var adjacent: [TreeNode] = [] // Nodes that are on the same level
     public var levelNumber : Int
     public var FirstLevelPointer : Int = 0
+    
 //    public var SecondLevelPointer : Int = 0
 //    public var ThirdLevelPointer : Int = 0
     
@@ -27,6 +29,11 @@ public class TreeNode<T> {
     public func add(_ child: TreeNode) {
         children.append(child)
     }
+    
+    public func addAdjacent(_ node: TreeNode) {
+        adjacent.append(node)
+    }
+    
     
 //    public func setPointer(levelNumber : Int, pointerNumber : Int) {
 //        if levelNumber == 1 {
@@ -92,9 +99,7 @@ public func createTree() -> TreeNode<String> {
     
     let secondSet_22 = TreeNode<String>("Group 3: Pain and TMJ Disorders", examples: "TMJ Pain, Myofascial Pain", levelNumber: 2,
                                        value: ["Do you have difficulty opening or closing your mouth?",
-                                               "Have you noticed any swelling near your jaw?",
-                                              "Does the pain worsen with jaw movements, chewing, or teeth grinding?",
-                                              "Have you noticed tender areas in your jaw muscles?"])
+                                              "Does the pain worsen with jaw movements, chewing, or teeth grinding?"])
     
     let secondSet_30 = TreeNode<String>("Group 4: Dental Conditions", examples: "Tooth Erosion, Discolored Teeth, Sensitive Teeth, Cavities", levelNumber: 2, value: ["Is the tooth tender or painful when tapped on?",
                                 "Does the tooth have a yellowish colour?",
@@ -107,11 +112,8 @@ public func createTree() -> TreeNode<String> {
                                 "Do you have spontaneous tooth pain?"])
     
     let secondSet_32 = TreeNode<String>("Group 4: Dental Conditions", examples: "Tooth Erosion, Discolored Teeth, Sensitive Teeth, Cavities", levelNumber: 2, value: ["Does the tooth respond strongly to stimuli?",
-                                "Is there any movement in the tooth?",
                                 "Do visual inspections show caries or decalcifications?",
-                                "Are there any significant patterns shown during visual inspection?",
                                 "Are your teeth sensitive to hot, cold, sugary, or acidic substances?",
-                                "Do you have pain when eating, biting, or drinking hot/cold/sweet substances?",
                                 "Have you noticed visible holes or pits in your teeth?"])
     
     let secondSet_40 = TreeNode<String>("Group 5: Gum Disease (Periodontal disease)", examples: "Periodontal Disease", levelNumber: 2, value:["Do your gums bleed when brushing or flossing?"])
@@ -150,10 +152,10 @@ public func createTree() -> TreeNode<String> {
     let thirdSet_6 = TreeNode<String>(levelNumber: 3, value: ["Oral Cancer"])
     let thirdSet_7 = TreeNode<String>(levelNumber: 3, value: ["Cold Sores"])
 
-    // Organizing all the levels as tree structure
-    assessment.add(firstSet_0)
-    assessment.add(firstSet_1)
-    assessment.add(firstSet_2)
+    // Organizing the first level
+    assessment.addAdjacent(firstSet_0)
+    firstSet_0.addAdjacent(firstSet_1)
+    firstSet_1.addAdjacent(firstSet_2)
     
     let firstLevels = [firstSet_0, firstSet_1, firstSet_2]
     let secondLevels = [secondSet_00, secondSet_10, secondSet_20, secondSet_30, secondSet_40, secondSet_50, secondSet_60, secondSet_70]
@@ -163,6 +165,30 @@ public func createTree() -> TreeNode<String> {
             firstLevel.add(secondLevel)
         }
     }
+    
+    secondSet_00.addAdjacent(secondSet_01)
+    secondSet_00.addAdjacent(secondSet_02)
+    
+    secondSet_10.addAdjacent(secondSet_11)
+    secondSet_10.addAdjacent(secondSet_12)
+    
+    secondSet_20.addAdjacent(secondSet_21)
+    secondSet_20.addAdjacent(secondSet_22)
+    
+    secondSet_30.addAdjacent(secondSet_31)
+    secondSet_30.addAdjacent(secondSet_32)
+    
+    secondSet_40.addAdjacent(secondSet_41)
+    secondSet_40.addAdjacent(secondSet_42)
+    
+    secondSet_50.addAdjacent(secondSet_51)
+    secondSet_50.addAdjacent(secondSet_52)
+    
+    secondSet_60.addAdjacent(secondSet_61)
+    secondSet_60.addAdjacent(secondSet_62)
+    
+    secondSet_70.addAdjacent(secondSet_71)
+    secondSet_70.addAdjacent(secondSet_72)
     
     let secondSet_0 = [secondSet_00, secondSet_01, secondSet_02]
     let secondSet_1 = [secondSet_10, secondSet_11, secondSet_12]
@@ -190,11 +216,9 @@ public func createTree() -> TreeNode<String> {
     for secondSet in secondSet_7{
         secondSet.add(thirdSet_7)}
     
-
-
+    print(secondSet_11.children[0].name)
     
     // Return the assessment tree
     return assessment
 }
-
 

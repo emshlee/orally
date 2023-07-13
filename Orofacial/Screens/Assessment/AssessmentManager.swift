@@ -26,12 +26,14 @@ class AssessmentManager: ObservableObject {
     var questionIndex : Int = 0 // index of current question
     @Published private(set) var currentNode : TreeNode<String>
     var currentLevel : Int = 1
+    @Published private(set) var level2Node : TreeNode<String>
     
     init(pAssessment: Assessment) {
         self.assessment = pAssessment
-        self.length = assessment.tree.children[QSetIndex].value.count // number of questions in the current set
-        self.currentQuestion = assessment.tree.children[QSetIndex].value[questionIndex]
-        self.currentNode = assessment.tree.children[QSetIndex]
+        self.length = assessment.tree.adjacent[QSetIndex].value.count // number of questions in the current set
+        self.currentQuestion = assessment.tree.adjacent[QSetIndex].value[questionIndex]
+        self.currentNode = assessment.tree.adjacent[QSetIndex]
+        self.level2Node = TreeNode(levelNumber: 0, value: ["Dummy"])
     }
     
     func goToPrevious() {
@@ -45,13 +47,6 @@ class AssessmentManager: ObservableObject {
             setQuestion()
         }
     }
-    
-//    func startNewSet() {
-//        self.QSetIndex += 1
-//        questionIndex = 0 // reset question index
-//        self.length = currentNode.value.count // number of questions in the current set
-//        setQuestion()
-//    }
     
     func getScore() {
         score = userResponses.reduce(0, {x, y in x + y})
@@ -73,10 +68,10 @@ class AssessmentManager: ObservableObject {
     
     func getResult() {
         getScore()
-        if score > 1 || score == 0 {
+        if score > 1 || score == 0 { // The result is inconclusive
             if currentNode.levelNumber == 1 {
                 // don't change tree level, increment QSet index
-                if QSetIndex + 1 == assessment.tree.children.count {
+                if QSetIndex + 1 == 3 {
                     // We've reached the end of the first level question set
                     // The result is inconclusive
                     currentNode = TreeNode<String>(levelNumber: 3, value: ["Inconclusive"])
@@ -84,22 +79,35 @@ class AssessmentManager: ObservableObject {
                     questionIndex = 0
                     QSetIndex += 1
                     userResponses = [] // reset user responses
+                    currentNode = assessment.tree.adjacent[QSetIndex]
                 }
-            } else {
-                // In this case, we go back to the first level
-                currentNode = assessment.tree.children[assessment.tree.FirstLevelPointer + 1]
-                userResponses = []
+            } else if currentNode.levelNumber == 2 {
+                if QSetIndex + 1 == 2 {
+                    // We've reached the end of the first level question set
+                    // In this case, we go back to the first level
+                    currentNode = assessment.tree.adjacent[assessment.tree.FirstLevelPointer + 1]
+                    userResponses = []
+                } else { // Move to next set
+                    questionIndex = 0
+                    QSetIndex += 1
+                    userResponses = [] // reset user responses
+                }
             }
         } else { // score == 1
             if currentNode.levelNumber == 1 {
                 // Store current question set
                 assessment.tree.FirstLevelPointer = QSetIndex
+                level2Node = currentNode.children[userResponses.firstIndex(of: 1) ?? 0]
+            } else if currentNode.levelNumber == 2 {
+                currentNode = level2Node
             }
             // Move to next level
+//            print(userResponses)
+//            print("The children:\(currentNode.children[1].value[questionIndex])")
             currentNode = currentNode.children[userResponses.firstIndex(of: 1) ?? 0]
-            print(currentNode.name)
             userResponses = []
             questionIndex = 0
+            QSetIndex = 0
             getProgress()
             resetButtons()
         }
@@ -111,7 +119,6 @@ class AssessmentManager: ObservableObject {
     }
     
     func resetAssessment() {
-        print("Reset assessment")
         QSetIndex = 0
         questionIndex = 0
         length = assessment.tree.children[QSetIndex].value.count // number of questions in the current set
