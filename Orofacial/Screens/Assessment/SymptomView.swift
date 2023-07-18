@@ -90,6 +90,7 @@ struct SymptomPage: View {
 struct EndView: View {
     @StateObject var assessmentManager: AssessmentManager
     
+    
     var body: some View {
         VStack {
             Text("Your Result")
@@ -157,8 +158,11 @@ struct EndView: View {
                         .bold()
                         .padding()
                         .padding(.bottom)
-                    
-                    // Encyclopedia button ??
+                    //fix if needed
+                    NavigationLink(destination: EncyclopediaPage(Encyclopedia: EncyclopediaList[13]))  {
+                        
+                        PrimaryButton(text: "Learn more about your result")
+                                   }
                 }
             }
             
