@@ -45,6 +45,10 @@ struct HomeView: View {
                             }
                             .padding()
                            
+                            Text("About Basic Dental Care")
+                                .bold()
+                                .padding(.top, 30)
+                            
                             ScrollView {
                                 DentalInfoList(infos: Info.all)
                             }
@@ -54,7 +58,6 @@ struct HomeView: View {
                         .padding(.top, 30)
                         .padding(.bottom, 80)
                         
-                        // Basic dental care
                         
                         FAQView()
                     }

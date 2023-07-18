@@ -134,7 +134,7 @@
 		677907FD2A2EB48A00B3D1FE /* DentalInfoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoList.swift; sourceTree = "<group>"; };
 		677908002A2EB9D200B3D1FE /* DentalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentalInfoView.swift; sourceTree = "<group>"; };
 		AE553CEC2A279FD00072CE58 /* TeethView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeethView.swift; sourceTree = "<group>"; };
-		BE02B58729B0189300CA5C84 /* Orofacial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orofacial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE02B58729B0189300CA5C84 /* Orally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE02B58A29B0189300CA5C84 /* OrofacialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrofacialApp.swift; sourceTree = "<group>"; };
 		BE02B58C29B0189300CA5C84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE02B58E29B0189400CA5C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 		BE02B58829B0189300CA5C84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE02B58729B0189300CA5C84 /* Orofacial.app */,
+				BE02B58729B0189300CA5C84 /* Orally.app */,
 				BE02B59729B0189400CA5C84 /* OrofacialTests.xctest */,
 				BE02B5A129B0189400CA5C84 /* OrofacialUITests.xctest */,
 			);
@@ -535,7 +535,7 @@
 				BED22F652A349C7A0069FFB0 /* SwiftUICharts */,
 			);
 			productName = Orofacial;
-			productReference = BE02B58729B0189300CA5C84 /* Orofacial.app */;
+			productReference = BE02B58729B0189300CA5C84 /* Orally.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BE02B59629B0189400CA5C84 /* OrofacialTests */ = {
@@ -887,7 +887,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.Orofacial;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Orally;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -917,7 +917,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AKCSE.Orofacial;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Orally;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
