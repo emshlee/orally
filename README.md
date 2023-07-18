@@ -16,7 +16,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
@@ -33,14 +32,17 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The "Assessment of Orofacial Pain and Symptoms" app is designed to address the oral health disparities that exist in our society and promote oral health equity. Many individuals hesitate to visit the dentist due to dentophobia or the high cost of treatments, resulting in inadequate oral health management. This app aims to empower users by providing them with a reliable assessment tool for orofacial pain and related conditions.
+"Orally" is an app designed to address the oral health disparities that exist in our society and promote oral health equity. Many individuals hesitate to visit the dentist due to dentophobia or the high cost of treatments, resulting in inadequate oral health management. This app aims to empower users by providing them with a reliable assessment tool for orofacial pain and related conditions.
 
 **While the app does not provide a definitive diagnosis, it empowers users to understand their symptoms and guides them toward seeking appropriate professional medical care.**
-
 
 ### Built with
 
 * [![Swift][SwiftUI]][Swift-url]
+
+IDE (Integrated Development Environment) used:
+
+* [![Xcode][Xcode.com]][Xcode-url]
 
 Design tools used:
 
@@ -52,26 +54,12 @@ Design tools used:
 
 ### Prerequisites
 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+No additional downloads are required apart from Xcode. By utilizing Xcode, you will be able to observe the workflow of the mobile application.
 
-### Installation
+Xcode is Apple's integrated development environment for macOS, used to develop software for macOS, iOS, iPadOS, watchOS, tvOS, and visionOS.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+Learn more about Xcode here:
+[![Xcode][Xcode.com]][Xcode-url]
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -105,6 +93,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [Instagram-url]: https://instagram.com/akcse_mcgill?igshid=MzRlODBiNWFlZA==
 [SwiftUI]: https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white
 [Swift-url]: https://developer.apple.com/swift/
+[Xcode.com]: https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white
+[Xcode-url]: https://developer.apple.com/xcode/
 [Figma.com]: https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white
 [Figma-url]: https://www.figma.com/
 [Canva.com]: https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white
