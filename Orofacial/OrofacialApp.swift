@@ -9,8 +9,10 @@ import SwiftUI
 
 @main
 struct OrofacialApp: App {
+   // @State private var showMainView = false
+    
     var body: some Scene {
-        WindowGroup {
+        WindowGroup{
             MainView()
         }
     }
