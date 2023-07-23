@@ -15,7 +15,7 @@ struct Application: App {
         WindowGroup {
             NavigationStack {
                 OnboardingView()
-                EmailAuth()
+             
                 AuthenticationView()
                     .environmentObject(LoginManager())
             }
