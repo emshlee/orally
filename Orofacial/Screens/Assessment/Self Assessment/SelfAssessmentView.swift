@@ -91,12 +91,21 @@ struct SelfEndView: View {
         VStack {
             Text("Your Result:")
                 .padding()
+                .font(.title)
+                .fontWeight(.heavy)
+                .foregroundColor(Color("AccentColor"))
+            
+            Image("sad face")
+                .resizable()
+                .frame(width: 300, height: 300)
 
             Text("\(assessmentManager.result)")
                 .padding()
+                .font(.system(size: 20))
+                .bold()
+                .foregroundColor(.gray)
+                .padding(.bottom)
 
-            Text("The interpretation should be displayed here.")
-                .padding(.bottom, 60)
 
             NavigationLink {
                 ProfileView(scores: profileView.scores + [Double(assessmentManager.score)])
@@ -107,10 +116,10 @@ struct SelfEndView: View {
             .navigationBarBackButtonHidden(true)
         }
         .onAppear(perform: assessmentManager.getScore)
-        .onAppear(perform: assessmentManager.getResult)
+//        .onAppear(perform: assessmentManager.getResult)
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("BackgroundColor"))
+        .background(.white)
     }
 
 }

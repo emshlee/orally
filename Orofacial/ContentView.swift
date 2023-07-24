@@ -34,7 +34,7 @@ struct ContentView: View {
                 OnboardingContentManagerImpl(manager: plistManager)
                 
                 OnboardingScreenView(manager: onboardingContentManager) {
-                    hasSeenOnboarding = true
+                    hasSeenOnboarding = false
                 }
             })
         }

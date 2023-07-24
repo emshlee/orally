@@ -14,7 +14,10 @@ struct EmailAuth: View {
     @State var email = ""
     @State var password = ""
     @State var isLoggedIn = false
-    //@Binding var showMainView = false
+    
+    @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+    init(){isOnboardingViewActive = true}
+    @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
     
     var body: some View {
         NavigationStack {
@@ -44,28 +47,39 @@ struct EmailAuth: View {
                 
                 NavigationLink{
                     MainView()
+                        .navigationBarBackButtonHidden()
                 } label: {
-                    Button(action: {
-                        if isLogin {
-                            loginUser();
-                            
-                        } else {
-                            createUser()
-                        }
-                    }, label: {
+//                    Button(
+//                        action: {
+//                        if isLogin {
+//                            loginUser();
+//                        } else {
+//                            createUser()
+//                        }
+//                    } , label: {
                         Text(isLogin ? "Log In" : "Create Account")
                             .foregroundColor(.white)
-                    }).frame(width: 280, height: 45, alignment: .center)
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                    //                    NavigationLink("",destination: MainView(), isActive: $isLoggedIn)
+                    }
+                .frame(width: 280, height: 45, alignment: .center)
+                .background(Color("AccentColor"))
+                .cornerRadius(8)
                 }
                 
                 
                 
-            }.navigationTitle(isLogin ? "Welcome Back" : "Welcome, Sign up here")
+            }
+            .navigationTitle(isLogin ? "Welcome Back" : "Sign up here")
+            .fullScreenCover(isPresented: .constant(!hasSeenOnboarding),
+                                 content: {
+                    let plistManager = PlistManagerImpl()
+                    let onboardingContentManager =
+                    OnboardingContentManagerImpl(manager: plistManager)
+                    
+                    OnboardingScreenView(manager: onboardingContentManager) {
+                        hasSeenOnboarding = true
+                    }
+                })
         }
-    }
     
     
     

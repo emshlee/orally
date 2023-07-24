@@ -13,7 +13,7 @@ struct OrofacialApp: App {
     
     var body: some Scene {
         WindowGroup{
-            MainView()
+            EmailAuth()
         }
     }
 }

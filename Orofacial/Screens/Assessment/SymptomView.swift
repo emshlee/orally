@@ -167,7 +167,7 @@ struct EndView: View {
             }
             
             NavigationLink {
-                HomeView()
+                MainView()
                     .navigationBarBackButtonHidden(true)
             } label: {
                 PrimaryButton(text: "End assessment")

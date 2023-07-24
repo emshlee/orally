@@ -33,9 +33,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 struct MainView: View {
-        @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
-        init(){isOnboardingViewActive = true}
-        @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
+//        @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding = false
+//        init(){isOnboardingViewActive = true}
+//        @AppStorage("onboarding") var isOnboardingViewActive: Bool = true
         @State private var showSignInView: Bool = false
         
         var body: some View {
@@ -61,16 +61,16 @@ struct MainView: View {
                         Text("Settings")}
             }
             // If onboarding screen hasn't been displayed yet
-            .fullScreenCover(isPresented: .constant(!hasSeenOnboarding),
-                             content: {
-                let plistManager = PlistManagerImpl()
-                let onboardingContentManager =
-                OnboardingContentManagerImpl(manager: plistManager)
-                
-                OnboardingScreenView(manager: onboardingContentManager) {
-                    hasSeenOnboarding = true
-                }
-            })
+//            .fullScreenCover(isPresented: .constant(!hasSeenOnboarding),
+//                             content: {
+//                let plistManager = PlistManagerImpl()
+//                let onboardingContentManager =
+//                OnboardingContentManagerImpl(manager: plistManager)
+//
+//                OnboardingScreenView(manager: onboardingContentManager) {
+//                    hasSeenOnboarding = true
+//                }
+//            })
         }
     }
     

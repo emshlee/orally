@@ -40,7 +40,12 @@ class SelfAssessmentManager: ObservableObject {
     
     func getScore() {
         // TO BE CHANGED
-        score = 0
+        score = userResponses.reduce(0, {x, y in x + y})
+        if score <= 5 {
+            result = "Improvement needed"
+        } else if score <= 10 {
+            result = "Adequate"
+        }
     }
     
     func getProgress() {
@@ -76,13 +81,13 @@ class SelfAssessmentManager: ObservableObject {
         
     }
     
-    func getResult() {
-        if score > 8 {
-            result = "Good"
-        } else if score > 5 {
-            
-        }
-    }
+//    func getResult() {
+//        if score > 8 {
+//            result = "Good"
+//        } else if score > 5 {
+//            
+//        }
+//    }
     
     func setQuestion() {
         resetButtons()
