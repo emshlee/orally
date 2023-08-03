@@ -102,8 +102,6 @@ class AssessmentManager: ObservableObject {
                 currentNode = level2Node
             }
             // Move to next level
-//            print(userResponses)
-//            print("The children:\(currentNode.children[1].value[questionIndex])")
             currentNode = currentNode.children[userResponses.firstIndex(of: 1) ?? 0]
             userResponses = []
             questionIndex = 0
