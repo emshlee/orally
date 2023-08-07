@@ -36,6 +36,9 @@
 
 **While the app does not provide a definitive diagnosis, it empowers users to understand their symptoms and guides them toward seeking appropriate professional medical care.**
 
+[👉 View Project Outline](https://drive.google.com/file/d/1EpJ2Akv5siZrhSwY495YBYIEGBME2Eb0/view?usp=sharing)
+
+
 ### Demo Video
 [![Orally](https://img.youtube.com/vi/16ExUR-jKyU/0.jpg)](https://www.youtube.com/watch?v=16ExUR-jKyU)
 
