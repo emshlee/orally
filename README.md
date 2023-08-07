@@ -36,8 +36,7 @@
 
 **While the app does not provide a definitive diagnosis, it empowers users to understand their symptoms and guides them toward seeking appropriate professional medical care.**
 
-[<img src="https://www.youtube.com/watch?v=16ExUR-jKyU.jpg" width="50%">](https://www.youtube.com/watch?v=16ExUR-jKyU "Orally Demo Video")
-
+[![Orally](https://img.youtube.com/vi/16ExUR-jKyU/0.jpg)](https://www.youtube.com/watch?v=16ExUR-jKyU)
 
 ### Built with
 
