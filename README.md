@@ -36,6 +36,9 @@
 
 **While the app does not provide a definitive diagnosis, it empowers users to understand their symptoms and guides them toward seeking appropriate professional medical care.**
 
+[<img src="https://www.youtube.com/watch?v=16ExUR-jKyU.jpg" width="50%">](https://www.youtube.com/watch?v=16ExUR-jKyU "Orally Demo Video")
+
+
 ### Built with
 
 * [![Swift][SwiftUI]][Swift-url]
@@ -81,6 +84,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Acknowledgments
 
 * [Apple Developer Documentation](https://developer.apple.com/documentation/swift)
+* [Build a trivia game app from scratch with this SwiftUI crash course](https://www.youtube.com/watch?v=b55npVkqa5U&t=1492s)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
